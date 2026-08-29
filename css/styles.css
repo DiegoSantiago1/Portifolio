@@ -41,6 +41,7 @@
     background: linear-gradient(to right,transparent 0%,rgba(255,255,255,.1) 50%,transparent 100%)
 }
 .skill-tech-item {
+    --skill-color: 249 115 22;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,19 +54,24 @@
     transition: all .3s ease
 }
 .skill-tech-item:hover {
-    background: rgba(0,0,0,.1);
-    border-color: rgba(0,0,0,.2);
+    background: rgb(var(--skill-color)/.12);
+    border-color: rgb(var(--skill-color)/.5);
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255,105,0,.4)
+    box-shadow: 0 0 14px rgb(var(--skill-color)/.5)
 }
 .dark .skill-tech-item {
     background: rgba(255,255,255,.05);
     border: 1px solid rgba(255,255,255,.1)
 }
 .dark .skill-tech-item:hover {
-    background: rgba(255,255,255,.1);
-    border-color: rgba(255,255,255,.2)
+    background: rgb(var(--skill-color)/.18);
+    border-color: rgb(var(--skill-color)/.65);
+    box-shadow: 0 0 16px rgb(var(--skill-color)/.55)
 }
+.skill-orange { --skill-color: 249 115 22 }
+.skill-blue { --skill-color: 37 99 235 }
+.skill-yellow { --skill-color: 234 179 8 }
+.skill-green { --skill-color: 22 163 74 }
 @media(max-width:767px) {
     .skill-tech-item {
         padding: .75rem .5rem!important
@@ -503,6 +509,58 @@ html:not(.dark) {
 .project-card[hidden] {
     display: none
 }
+.certificate-tabs {
+    display: flex;
+    gap: .75rem;
+    overflow-x: auto;
+    padding: .25rem;
+    border-bottom: 1px solid rgba(107,114,128,.35)
+}
+.certificate-tab {
+    flex: 1 0 auto;
+    border-radius: .5rem .5rem 0 0;
+    padding: .8rem 1.25rem;
+    color: rgb(75 85 99);
+    font-weight: 700;
+    transition: all .25s ease
+}
+.certificate-tab:hover,.certificate-tab.active {
+    background: rgba(234,88,12,.12);
+    color: rgb(194 65 12)
+}
+.certificate-tab.active {
+    box-shadow: inset 0 -3px #ea580c
+}
+.dark .certificate-tab {
+    color: rgb(209 213 219)
+}
+.dark .certificate-tab:hover,.dark .certificate-tab.active {
+    background: rgba(249,115,22,.16);
+    color: rgb(251 146 60)
+}
+.certificate-empty {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 9rem;
+    border: 1px dashed rgba(234,88,12,.45);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    background: rgba(249,115,22,.06)
+}
+.certificate-tag {
+    border: 1px solid rgba(234,88,12,.35);
+    border-radius: 9999px;
+    padding: .25rem .55rem
+}
+.certificate-link {
+    color: rgb(234 88 12);
+    font-size: .875rem;
+    font-weight: 700
+}
+.certificate-link:hover {
+    text-decoration: underline
+}
 .achievement-card {
     border-top-width: .25rem
 }
@@ -522,4 +580,810 @@ html:not(.dark) {
         animation-iteration-count: 1!important;
         transition-duration: .01ms!important
     }
+}
+/* =========================================================
+   CERTIFICADOS E CONQUISTAS
+   ========================================================= */
+
+.certificates-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 32px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.certificate-card {
+    position: relative;
+
+    min-height: 700px;
+
+    padding: 28px 26px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1a1a1a 0%,
+            #121212 55%,
+            #0d0d0d 100%
+        );
+
+    border: 2px solid #303030;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+/* =========================================================
+   BRILHO ANIMADO
+   ========================================================= */
+
+.certificate-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 90%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left .8s ease;
+
+    pointer-events: none;
+}
+
+
+.certificate-card:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================================
+   DEVCLUB — ROXO
+   ========================================================= */
+
+.certificate-devclub {
+    border-top: 2px solid #303030;
+}
+
+
+.certificate-devclub:hover {
+    transform: translateY(-8px);
+
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 20px rgba(168,85,247,.25),
+        0 15px 40px rgba(168,85,247,.15);
+}
+
+
+/* =========================================================
+   CURSO EM VÍDEO — AZUL
+   ========================================================= */
+
+.certificate-curso-video {
+    border-top: 2px solid #303030;
+}
+
+
+.certificate-curso-video:hover {
+    transform: translateY(-8px);
+
+    border-color: #1683ff;
+
+    box-shadow:
+        0 0 20px rgba(22,131,255,.25),
+        0 15px 40px rgba(22,131,255,.15);
+}
+
+
+/* =========================================================
+   OUTROS — LARANJA
+   ========================================================= */
+
+.certificate-outros {
+    border-top: 2px solid #303030;
+}
+
+
+.certificate-outros:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 0 20px rgba(255,122,0,.25),
+        0 15px 40px rgba(255,122,0,.15);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.certificate-header {
+    width: 100%;
+
+    min-height: 155px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ÁREA DOS LOGOS
+   TODOS COM O MESMO TAMANHO
+   ========================================================= */
+
+.certificate-logo {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   IMAGENS DAS LOGOS
+   ========================================================= */
+
+.certificate-logo img {
+    display: block;
+
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+
+/*
+   Mesmo espaço visual para as duas logos.
+   A imagem se adapta sem deformar.
+*/
+
+.certificate-devclub .certificate-logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+
+.certificate-curso-video .certificate-logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+
+/* animação das logos */
+
+.certificate-card:hover .certificate-logo img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   ÍCONE "OUTROS"
+   MESMO TAMANHO DAS LOGOS
+   ========================================================= */
+
+.outros-logo {
+    width: 90px;
+    height: 90px;
+
+    color: #ff7a00;
+
+    filter:
+        drop-shadow(0 0 7px rgba(255,122,0,.25));
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+
+.outros-logo svg {
+    width: 90px;
+    height: 90px;
+}
+
+
+.certificate-outros:hover .outros-logo {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 14px rgba(255,122,0,.55));
+}
+
+
+/* =========================================================
+   TÍTULO ABAIXO DA LOGO
+   ========================================================= */
+
+.certificate-title {
+    margin: 0;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    letter-spacing: -.4px;
+}
+
+
+/* =========================================================
+   COR DOS TÍTULOS
+   ========================================================= */
+
+.certificate-devclub .certificate-title {
+    color: #ffffff;
+}
+
+
+.certificate-curso-video .certificate-title {
+    color: #ffffff;
+}
+
+
+.certificate-outros .certificate-title {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   DIVISÓRIA
+   ========================================================= */
+
+.certificate-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 23px;
+
+    flex-shrink: 0;
+}
+
+
+/* DevClub */
+
+.certificate-devclub .certificate-divider {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a855f7,
+            transparent
+        );
+}
+
+
+/* Curso em Vídeo */
+
+.certificate-curso-video .certificate-divider {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #1683ff,
+            transparent
+        );
+}
+
+
+/* Outros */
+
+.certificate-outros .certificate-divider {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff7a00,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LISTA
+   ========================================================= */
+
+.certificate-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    flex-grow: 1;
+}
+
+
+.certificate-list li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+}
+
+
+/* =========================================================
+   SETAS
+   ========================================================= */
+
+.certificate-arrow {
+    flex-shrink: 0;
+
+    font-size: 21px;
+
+    line-height: 20px;
+
+    transition:
+        transform .25s ease,
+        text-shadow .25s ease;
+}
+
+
+/* DevClub */
+
+.certificate-devclub .certificate-arrow {
+    color: #a855f7;
+}
+
+
+/* Curso em Vídeo */
+
+.certificate-curso-video .certificate-arrow {
+    color: #1683ff;
+}
+
+
+/* Outros */
+
+.certificate-outros .certificate-arrow {
+    color: #ff7a00;
+}
+
+
+/* =========================================================
+   HOVER DOS CURSOS
+   ========================================================= */
+
+.certificate-list li:hover {
+    transform: translateX(5px);
+
+    color: #ffffff;
+}
+
+
+/* DevClub */
+
+.certificate-devclub
+.certificate-list li:hover
+.certificate-arrow {
+    text-shadow:
+        0 0 8px rgba(168,85,247,.9);
+}
+
+
+/* Curso em Vídeo */
+
+.certificate-curso-video
+.certificate-list li:hover
+.certificate-arrow {
+    text-shadow:
+        0 0 8px rgba(22,131,255,.9);
+}
+
+
+/* Outros */
+
+.certificate-outros
+.certificate-list li:hover
+.certificate-arrow {
+    text-shadow:
+        0 0 8px rgba(255,122,0,.9);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 24px;
+    }
+
+
+    .certificate-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .certificate-card {
+        padding: 25px 20px;
+
+        border-radius: 10px;
+    }
+
+
+    .certificate-header {
+        min-height: 145px;
+    }
+
+
+    .certificate-logo,
+    .certificate-logo img,
+    .outros-logo {
+        width: 82px;
+        height: 82px;
+    }
+
+
+    .outros-logo svg {
+        width: 82px;
+        height: 82px;
+    }
+
+
+    .certificate-title {
+        font-size: 23px;
+    }
+
+
+    .certificate-list {
+        gap: 14px;
+    }
+
+
+    .certificate-list li {
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   BOTÃO DE TEMA — LIGHT / DARK
+   ========================================================= */
+
+.theme-switch {
+    position: relative;
+
+    width: 82px;
+    height: 44px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid #333;
+
+    border-radius: 999px;
+
+    background: #151515;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   ÍCONES
+   ========================================================= */
+
+.theme-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition:
+        color .35s ease,
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+
+.theme-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================================
+   SOL
+   ========================================================= */
+
+.theme-sun {
+    color: #9b7650;
+    opacity: .65;
+}
+
+
+/* =========================================================
+   LUA
+   ========================================================= */
+
+.theme-moon {
+    color: #ff8a1f;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   BOTÃO CIRCULAR DESLIZANTE
+   ========================================================= */
+
+.theme-slider {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 4px;
+    left: 4px;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff9b3d,
+            #f27612
+        );
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.45);
+
+    transition:
+        transform .4s cubic-bezier(.68,-.55,.27,1.55),
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* =========================================================
+   TEMA ESCURO
+   ========================================================= */
+
+/*
+   Quando o <html> possui a classe "dark",
+   o botão desliza para a direita.
+*/
+
+html.dark .theme-slider {
+    transform: translateX(38px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff9b3d,
+            #f27612
+        );
+
+    box-shadow:
+        0 2px 10px rgba(255,122,0,.30);
+}
+
+
+html.dark .theme-sun {
+    color: #8a6a47;
+    opacity: .55;
+
+    transform: scale(.9);
+}
+
+
+html.dark .theme-moon {
+    color: #ffffff;
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   TEMA CLARO
+   ========================================================= */
+
+html:not(.dark) .theme-slider {
+    transform: translateX(0);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #eeeeee
+        );
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.20);
+}
+
+
+html:not(.dark) .theme-sun {
+    color: #f59e0b;
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+
+html:not(.dark) .theme-moon {
+    color: #777777;
+    opacity: .55;
+
+    transform: scale(.9);
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.theme-switch:hover {
+    border-color: #555;
+
+    box-shadow:
+        0 0 0 3px rgba(255,122,0,.08);
+}
+
+
+.theme-switch:hover .theme-slider {
+    box-shadow:
+        0 3px 12px rgba(255,122,0,.35);
+}
+
+
+/* =========================================================
+   ACTIVE / CLICK
+   ========================================================= */
+
+.theme-switch:active .theme-slider {
+    width: 38px;
+}
+
+
+/* =========================================================
+   FOCO — ACESSIBILIDADE
+   ========================================================= */
+
+.theme-switch:focus-visible {
+    outline: 2px solid #ff7a00;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .theme-switch {
+        width: 76px;
+        height: 40px;
+    }
+
+    .theme-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .theme-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .theme-slider {
+        width: 32px;
+        height: 32px;
+
+        top: 3px;
+        left: 3px;
+    }
+
+    html.dark .theme-slider {
+        transform: translateX(36px);
+    }
+
 }

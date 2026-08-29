@@ -32,5 +32,10 @@ window.PORTFOLIO_DATA = {
                 'Projeto de sustentabilidade urbana em equipe multidisciplinar'
             ]
         }
-    ]
+    ],
+    certificates: {
+        devclub: [],
+        cursoemvideo: [],
+        outros: []
+    }
 };

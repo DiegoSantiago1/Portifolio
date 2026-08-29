@@ -54,18 +54,56 @@
                     <a href="#certificacoes" class="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Certificações</a>
                     <a href="#contato" class="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Contato</a>
                 </div>
-                <button id="theme-toggle" type="button" aria-pressed="false" class="group p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <span class="sr-only">Alterar tema</span>
-                    <svg class="w-6 h-6 md:w-7 md:h-7 block dark:hidden transition-all duration-300 text-gray-700 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.5" opacity="0.15" fill="none"></circle>
-                        <path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="currentColor" opacity="0.85" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="w-6 h-6 md:w-7 md:h-7 hidden dark:block transition-all duration-300 text-gray-400 dark:text-gray-500 group-hover:text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="0.5" opacity="0.3" fill="none"></circle>
-                        <g class="sun-rays-hover"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" d="M12 2v3M12 19v3M22 12h-3M5 12H2M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12M19.07 19.07l-2.12-2.12M7.05 7.05L4.93 4.93"></path></g>
-                        <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="0" fill="currentColor" opacity="0.95"></circle>
-                    </svg>
-                </button>
+                <!-- BOTÃO DE TEMA -->
+<button
+    id="theme-toggle"
+    type="button"
+    aria-label="Alternar tema"
+    aria-pressed="false"
+    class="theme-switch"
+>
+    <span class="sr-only">Alterar tema</span>
+
+    <!-- SOL -->
+    <span class="theme-icon theme-sun">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+    </span>
+
+    <!-- LUA -->
+    <span class="theme-icon theme-moon">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+        >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3
+                     7 7 0 0 0 21 12.79Z">
+            </path>
+        </svg>
+    </span>
+
+    <!-- BOTÃO DESLIZANTE -->
+    <span class="theme-slider"></span>
+
+</button>
                 <button id="mobile-menu-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg focus:outline-none transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
                 </button>
@@ -112,7 +150,7 @@
                     </a>
                     <a href="#contato" class="inline-flex items-center justify-center gap-x-2 h-11 px-8 text-white bg-accent-gradient shadow-glow transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-                        Solicitar currículo
+                        Baixar currículo
                     </a>
                 </div>
             </div>
@@ -131,10 +169,12 @@
                             <h3 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">Front-end</h3>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-                            <div class="skill-tech-item"><i class="tech-icon devicon-html5-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">HTML</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-css3-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">CSS</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-javascript-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">JavaScript</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-tailwindcss-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Tailwind</span></div>
+                            <div class="skill-tech-item skill-orange"><i class="tech-icon devicon-html5-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">HTML</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-css3-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">CSS</span></div>
+                            <div class="skill-tech-item skill-yellow"><i class="tech-icon devicon-javascript-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">JavaScript</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-react-original colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">React</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-react-original colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">React Native</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-tailwindcss-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Tailwind</span></div>
                         </div>
                     </div>
                     <div class="skill-card reveal delay-200 rounded-xl p-5 md:p-6 shadow-sm">
@@ -145,7 +185,7 @@
                             <h3 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">Back-end</h3>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-                            <div class="skill-tech-item"><i class="tech-icon devicon-nodejs-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Node.js</span></div>
+                            <div class="skill-tech-item skill-green"><i class="tech-icon devicon-nodejs-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Node.js</span></div>
                         </div>
                     </div>
                     <div class="skill-card reveal delay-300 rounded-xl p-5 md:p-6 shadow-sm">
@@ -156,8 +196,8 @@
                             <h3 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">Banco de Dados</h3>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-                            <div class="skill-tech-item"><i class="tech-icon devicon-postgresql-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">PostgreSQL</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-mysql-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">MySQL</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-postgresql-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">PostgreSQL</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-mysql-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">MySQL</span></div>
                         </div>
                     </div>
                     <div class="skill-card reveal delay-400 rounded-xl p-5 md:p-6 shadow-sm">
@@ -168,9 +208,9 @@
                             <h3 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white">Ferramentas</h3>
                         </div>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
-                            <div class="skill-tech-item"><i class="tech-icon devicon-git-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Git / GitHub</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-docker-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Docker</span></div>
-                            <div class="skill-tech-item"><i class="tech-icon devicon-amazonwebservices-plain-wordmark colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">AWS</span></div>
+                            <div class="skill-tech-item skill-orange"><i class="tech-icon devicon-git-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Git / GitHub</span></div>
+                            <div class="skill-tech-item skill-blue"><i class="tech-icon devicon-docker-plain colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">Docker</span></div>
+                            <div class="skill-tech-item skill-orange"><i class="tech-icon devicon-amazonwebservices-plain-wordmark colored" aria-hidden="true"></i><span class="text-xs md:text-base font-medium text-center text-gray-900 dark:text-gray-300">AWS</span></div>
                         </div>
                     </div>
                 </div>
@@ -312,50 +352,261 @@
             </div>
         </section>
 
-        <!-- CERTIFICAÇÕES -->
-        <section id="certificacoes" class="py-16 md:py-24 bg-[#e1e1e1] dark:bg-[#101010] text-gray-800 dark:text-white overflow-hidden">
-            <div class="container mx-auto px-6">
-                <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Certificados e <span class="text-orange-600">Conquistas</span></h2>
-                <div id="achievements-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    <div class="skill-card hover-plat1 reveal delay-100 p-5 md:p-6 flex flex-col h-full rounded-xl shadow-lg bg-white dark:bg-[#1f1f1f] border-t-4 border-t-orange-600 dark:border-t-orange-600 transition duration-300 hover:shadow-xl hover:shadow-orange-500/20">
-                        <div class="mb-4 md:mb-6 pb-3 md:pb-4 border-b border-gray-200 dark:border-gray-700 flex flex-col items-center">
-                            <div class="tech-icon-placeholder h-10 md:h-12 w-28 md:w-32 mb-1 md:mb-2" style="background:#EA580C; font-size:.8rem; border-radius:.25rem;">Plataformas</div>
-                        </div>
-                        <div class="flex-grow">
-                            <ul class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700 dark:text-gray-300">
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 1</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 2</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 3</li>
-                            </ul>
-                        </div>
+  <!-- CERTIFICADOS E CONQUISTAS -->
+<section id="certificacoes"
+    class="py-16 md:py-24 bg-[#e1e1e1] dark:bg-[#101010] text-gray-800 dark:text-white overflow-hidden">
+
+    <div class="container mx-auto px-6">
+
+        <!-- TÍTULO -->
+        <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">
+            Certificados e
+            <span class="text-orange-600">Conquistas</span>
+        </h2>
+
+        <!-- CARDS -->
+        <div class="certificates-grid">
+
+            <!-- =========================
+                 DEVCLUB
+            ========================== -->
+            <div class="certificate-card certificate-devclub reveal delay-100">
+
+                <div class="certificate-header">
+
+                    <div class="certificate-logo">
+                        <img
+                            src="./assets/images/devclub.png"
+                            alt="Logo DevClub"
+                        >
                     </div>
-                    <div class="skill-card hover-plat2 reveal delay-200 p-5 md:p-6 flex flex-col h-full rounded-xl shadow-lg bg-white dark:bg-[#1f1f1f] border-t-4 border-t-purple-600 dark:border-t-purple-500 transition duration-300 hover:shadow-xl hover:shadow-purple-500/20">
-                        <div class="mb-4 md:mb-6 pb-3 md:pb-4 border-b border-gray-200 dark:border-gray-700 flex flex-col items-center">
-                            <div class="tech-icon-placeholder h-10 md:h-12 w-28 md:w-32 mb-1 md:mb-2" style="background:#9333EA; font-size:.8rem; border-radius:.25rem;">Plataformas</div>
-                        </div>
-                        <div class="flex-grow">
-                            <ul class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700 dark:text-gray-300">
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 1</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 2</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="skill-card hover-plat3 reveal delay-300 p-5 md:p-6 flex flex-col h-full rounded-xl shadow-lg bg-white dark:bg-[#1f1f1f] border-t-4 border-t-blue-800 dark:border-t-blue-800 transition duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-                        <div class="mb-4 md:mb-6 pb-3 md:pb-4 border-b border-gray-200 dark:border-gray-700 flex flex-col items-center">
-                            <div class="tech-icon-placeholder h-10 md:h-12 w-28 md:w-32 mb-1 md:mb-2" style="background:#1E40AF; font-size:.8rem; border-radius:.25rem;">Plataformas</div>
-                        </div>
-                        <div class="flex-grow">
-                            <ul class="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700 dark:text-gray-300">
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 1</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 2</li>
-                                <li class="flex items-start"><svg class="w-3.5 h-3.5 md:w-4 md:h-4 mt-0.5 md:mt-1 mr-2 flex-shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Nome do Certificado 3</li>
-                            </ul>
-                        </div>
-                    </div>
+
+                    <h3 class="certificate-title">
+                        DevClub
+                    </h3>
+
                 </div>
+
+                <div class="certificate-divider"></div>
+
+                <ul class="certificate-list">
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                </ul>
+
             </div>
-        </section>
+
+
+            <!-- =========================
+                 CURSO EM VÍDEO
+            ========================== -->
+            <div class="certificate-card certificate-curso-video reveal delay-200">
+
+                <div class="certificate-header">
+
+                    <div class="certificate-logo">
+                        <img
+                            src="./assets/images/curso-em-video2.jpg"
+                            alt="Logo Curso em Vídeo"
+                        >
+                    </div>
+
+                    <h3 class="certificate-title">
+                        Curso em Video
+                    </h3>
+
+                </div>
+
+                <div class="certificate-divider"></div>
+
+                <ul class="certificate-list">
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- =========================
+                 OUTROS
+            ========================== -->
+            <div class="certificate-card certificate-outros reveal delay-300">
+
+                <div class="certificate-header">
+
+                    <div class="certificate-logo outros-logo">
+
+                        <svg
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="32"
+                                cy="27"
+                                r="18"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                            />
+
+                            <path
+                                d="M22 43 L17 57 L32 49 L47 57 L42 43"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                                stroke-linejoin="round"
+                            />
+
+                            <path
+                                d="M32 17 L35 23 L42 24 L37 29 L38 36 L32 33 L26 36 L27 29 L22 24 L29 23 Z"
+                                fill="currentColor"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <h3 class="certificate-title">
+                        Outros
+                    </h3>
+
+                </div>
+
+                <div class="certificate-divider"></div>
+
+                <ul class="certificate-list">
+
+                   
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                    <li>
+                        <span class="certificate-arrow">→</span>
+                        <span>Curso</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- CONTATO -->
         <section id="contato" class="py-16 md:py-24 bg-[#e8e8e8] dark:bg-[#080808] text-gray-800 dark:text-white overflow-hidden">

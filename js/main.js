@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupActiveNavigation();
     setupProjectFilters();
     setupProjectExpansion();
+    setupCertificateTabs();
     setupContactForm();
 });
 
@@ -168,6 +169,55 @@ function setupProjectExpansion() {
             : '<span>Mostrar menos</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
         if (isExpanded) document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' });
     });
+}
+
+function setupCertificateTabs() {
+    const tabs = document.querySelectorAll('[data-certificate-category]');
+    const panel = document.getElementById('certificate-panel');
+    const certificates = window.PORTFOLIO_DATA?.certificates;
+    if (!tabs.length || !panel || !certificates) return;
+
+    const names = {
+        devclub: 'DevClub',
+        cursoemvideo: 'Curso em Vídeo',
+        outros: 'Outros'
+    };
+
+    const renderCategory = (category) => {
+        const courses = certificates[category] || [];
+        panel.setAttribute('aria-labelledby', `certificate-tab-${category}`);
+        panel.innerHTML = courses.length
+            ? courses.map((course) => `
+                <article class="certificate-card skill-card p-5 md:p-6 flex flex-col gap-4">
+                    <div class="flex items-start justify-between gap-4">
+                        <div><p class="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">${names[category]}</p><h3 class="mt-1 text-lg md:text-xl font-bold text-gray-900 dark:text-white">${escapeHtml(course.title)}</h3></div>
+                        <svg class="h-7 w-7 shrink-0 text-orange-600 dark:text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 2 2.8 5.7L21 8.6l-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 8.6l6.2-.9L12 2Z"></path></svg>
+                    </div>
+                    ${course.description ? `<p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">${escapeHtml(course.description)}</p>` : ''}
+                    <div class="mt-auto flex flex-wrap gap-2 text-xs font-medium text-gray-600 dark:text-gray-400">
+                        ${course.workload ? `<span class="certificate-tag">${escapeHtml(course.workload)}</span>` : ''}
+                        ${course.completedAt ? `<span class="certificate-tag">Concluído em ${escapeHtml(course.completedAt)}</span>` : ''}
+                    </div>
+                    ${course.credentialUrl ? `<a href="${escapeHtml(course.credentialUrl)}" target="_blank" rel="noopener noreferrer" class="certificate-link">Ver certificado <span aria-hidden="true">↗</span></a>` : ''}
+                </article>
+            `).join('')
+            : `<div class="certificate-empty md:col-span-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 shrink-0 text-orange-600 dark:text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10M7 12h7M7 16h4"></path></svg><div><h3 class="font-bold text-gray-900 dark:text-white">Cursos de ${names[category]} em atualização</h3><p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Os certificados concluídos serão adicionados aqui em breve.</p></div></div>`;
+    };
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const category = tab.dataset.certificateCategory;
+            tabs.forEach((item) => {
+                const isActive = item === tab;
+                item.classList.toggle('active', isActive);
+                item.setAttribute('aria-selected', String(isActive));
+                item.tabIndex = isActive ? 0 : -1;
+            });
+            renderCategory(category);
+        });
+    });
+
+    renderCategory('devclub');
 }
 
 function setupContactForm() {
