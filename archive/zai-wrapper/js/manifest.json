@@ -1,0 +1,23 @@
+{
+  "name": "Z",
+  "short_name": "Z",
+  "description": "Z.ai",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#343541",
+  "orientation": "natural",
+  "icons": [
+    {
+      "src": "/static/logo.png",
+      "type": "image/png",
+      "sizes": "500x500",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/logo.png",
+      "type": "image/png",
+      "sizes": "500x500",
+      "purpose": "maskable"
+    }
+  ]
+}
