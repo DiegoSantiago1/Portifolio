@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Monograma DS">
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <path d="M17 17h13c10 0 17 6 17 15s-7 15-17 15H17V17Zm9 8v14h4c5 0 8-3 8-7s-3-7-8-7h-4Z" fill="#f97316"/>
+  <path d="M45 19c-3-2-7-3-11-3-7 0-12 3-12 8 0 10 17 6 17 12 0 2-2 3-5 3-4 0-8-2-11-4v9c3 2 7 3 12 3 7 0 13-3 13-9 0-10-17-7-17-12 0-1 1-2 4-2 4 0 7 2 10 4v-9Z" fill="#fff" opacity=".9"/>
+</svg>

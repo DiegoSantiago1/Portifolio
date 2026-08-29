@@ -1,10 +1,21 @@
-<!-- PortfÃ³lio extraÃ­do e organizado localmente. -->
+<!-- Portfólio extraído e organizado localmente. -->
 <!DOCTYPE html>
 <html lang="pt-br" class="" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Santiago - Portfólio</title>
+    <meta name="description" content="Portfólio de Diego Santiago, desenvolvedor FullStack com foco em interfaces modernas e aplicações web.">
+    <meta name="author" content="Diego Santiago">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ea580c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diego Santiago — Desenvolvedor FullStack">
+    <meta property="og:description" content="Conheça projetos, habilidades e trajetória profissional de Diego Santiago.">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -29,8 +40,10 @@
 
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans">
 
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
     <header class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 [&.scrolled]:bg-white/90 dark:[&.scrolled]:bg-black/80 dark:[&.scrolled]:backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Navegação principal">
             <a href="#" class="text-xl md:text-2xl font-bold text-gray-800 dark:text-white truncate">Diego Santiago</a>
             <div class="flex items-center gap-2 md:gap-8">
                 <div class="hidden md:flex items-center space-x-8">
@@ -41,7 +54,7 @@
                     <a href="#certificacoes" class="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Certificações</a>
                     <a href="#contato" class="hover:text-orange-500 dark:hover:text-orange-400 transition-colors">Contato</a>
                 </div>
-                <button id="theme-toggle" class="group p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
+                <button id="theme-toggle" type="button" aria-pressed="false" class="group p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700">
                     <span class="sr-only">Alterar tema</span>
                     <svg class="w-6 h-6 md:w-7 md:h-7 block dark:hidden transition-all duration-300 text-gray-700 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="0.5" opacity="0.15" fill="none"></circle>
@@ -53,7 +66,7 @@
                         <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="0" fill="currentColor" opacity="0.95"></circle>
                     </svg>
                 </button>
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg focus:outline-none transition-colors">
+                <button id="mobile-menu-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg focus:outline-none transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
                 </button>
             </div>
@@ -70,7 +83,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="conteudo-principal" tabindex="-1">
 
         <!-- SOBRE MIM -->
         <section id="sobre" class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative pt-20 text-gray-800 dark:text-white">
@@ -97,9 +110,9 @@
                     <a href="https://wa.link/5xhkks" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-12 w-12 border border-gray-300 dark:border-gray-700 bg-gray-200 hover:bg-white dark:bg-gray-800 dark:hover:bg-gray-700 transition-all duration-75 hover:scale-105 hover:shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
                     </a>
-                    <a href="images/curriculo.pdf" download="Curriculo_Diego_Santiago.pdf" class="inline-flex items-center justify-center gap-x-2 h-11 px-8 text-white bg-accent-gradient shadow-glow transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="#contato" class="inline-flex items-center justify-center gap-x-2 h-11 px-8 text-white bg-accent-gradient shadow-glow transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-                        Baixar Currículo
+                        Solicitar currículo
                     </a>
                 </div>
             </div>
@@ -227,10 +240,10 @@
                 <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">Meus <span class="text-orange-600">Projetos</span></h2>
                 <div class="reveal delay-100 mb-12 relative w-full">
                     <div id="project-filters" class="flex md:flex-wrap md:justify-center gap-3 overflow-x-auto hide-scrollbar pb-2 snap-x px-2">
-                        <button data-filter="all" class="filter-btn active whitespace-nowrap snap-start flex-shrink-0">Todas</button>
-                        <button data-filter="frontend" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">Front-end</button>
-                        <button data-filter="backend" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">Back-end</button>
-                        <button data-filter="fullstack" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">FullStack</button>
+                        <button type="button" data-filter="all" class="filter-btn active whitespace-nowrap snap-start flex-shrink-0">Todas</button>
+                        <button type="button" data-filter="frontend" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">Front-end</button>
+                        <button type="button" data-filter="backend" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">Back-end</button>
+                        <button type="button" data-filter="fullstack" class="filter-btn whitespace-nowrap snap-start flex-shrink-0">FullStack</button>
                     </div>
                     <div class="md:hidden absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-[#d2d2d2] dark:from-[#151515] to-transparent pointer-events-none"></div>
                     <div class="md:hidden absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-[#d2d2d2] dark:from-[#151515] to-transparent pointer-events-none"></div>
@@ -240,7 +253,7 @@
                         <div class="project-card reveal delay-100 rounded-xl overflow-hidden shadow-lg flex flex-col transform transition-all duration-500 ease-in-out hover:scale-[1.02]" data-tags="fullstack">
                             <div class="project-card-container">
                                 <div class="project-visuals relative h-48 md:h-72">
-                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="images/emdev.png" alt="Em Desenvolvimento" class="project-image"></div>
+                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="assets/images/project-in-development.png" alt="Interface abstrata representando um projeto em desenvolvimento" class="project-image" loading="lazy" width="1536" height="1024"></div>
                                     <div class="project-header skill-card absolute top-0 left-0 right-0 z-20 p-4 rounded-b-none border-b-0"><h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white truncate">Projeto em Desenvolvimento</h3></div>
                                     <div class="project-footer-tags skill-card absolute -bottom-2 left-0 right-0 z-20 p-3 md:p-4 rounded-t-none border-t-0"><div class="flex flex-wrap gap-1.5 md:gap-2"><span class="text-[10px] md:text-xs bg-gray-500/90 text-white px-2 py-1 rounded">Em breve</span></div></div>
                                 </div>
@@ -253,7 +266,7 @@
                         <div class="project-card reveal delay-200 rounded-xl overflow-hidden shadow-lg flex flex-col transform transition-all duration-500 ease-in-out hover:scale-[1.02]" data-tags="backend">
                             <div class="project-card-container">
                                 <div class="project-visuals relative h-48 md:h-72">
-                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="images/emdev.png" alt="Em Desenvolvimento" class="project-image"></div>
+                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="assets/images/project-in-development.png" alt="Interface abstrata representando um projeto em desenvolvimento" class="project-image" loading="lazy" width="1536" height="1024"></div>
                                     <div class="project-header skill-card absolute top-0 left-0 right-0 z-20 p-4 rounded-b-none border-b-0"><h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white truncate">Projeto em Desenvolvimento</h3></div>
                                     <div class="project-footer-tags skill-card absolute -bottom-2 left-0 right-0 z-20 p-3 md:p-4 rounded-t-none border-t-0"><div class="flex flex-wrap gap-1.5 md:gap-2"><span class="text-[10px] md:text-xs bg-gray-500/90 text-white px-2 py-1 rounded">Em breve</span></div></div>
                                 </div>
@@ -266,7 +279,7 @@
                         <div class="project-card reveal delay-300 rounded-xl overflow-hidden shadow-lg flex flex-col transform transition-all duration-500 ease-in-out hover:scale-[1.02]" data-tags="frontend">
                             <div class="project-card-container">
                                 <div class="project-visuals relative h-48 md:h-72">
-                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="images/emdev.png" alt="Em Desenvolvimento" class="project-image"></div>
+                                    <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="assets/images/project-in-development.png" alt="Interface abstrata representando um projeto em desenvolvimento" class="project-image" loading="lazy" width="1536" height="1024"></div>
                                     <div class="project-header skill-card absolute top-0 left-0 right-0 z-20 p-4 rounded-b-none border-b-0"><h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white truncate">Projeto em Desenvolvimento</h3></div>
                                     <div class="project-footer-tags skill-card absolute -bottom-2 left-0 right-0 z-20 p-3 md:p-4 rounded-t-none border-t-0"><div class="flex flex-wrap gap-1.5 md:gap-2"><span class="text-[10px] md:text-xs bg-gray-500/90 text-white px-2 py-1 rounded">Em breve</span></div></div>
                                 </div>
@@ -292,7 +305,7 @@
                 </div>
             </div>
             <div class="mt-8 flex justify-center">
-                <button id="btn-load-more" class="flex items-center gap-2 px-8 py-3 rounded-full font-bold text-white bg-accent-gradient shadow-glow transition-all duration-300 hover:scale-105">
+                <button id="btn-load-more" type="button" class="flex items-center gap-2 px-8 py-3 rounded-full font-bold text-white bg-accent-gradient shadow-glow transition-all duration-300 hover:scale-105">
                     <span>Ver Mais Projetos</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
                 </button>
@@ -303,7 +316,7 @@
         <section id="certificacoes" class="py-16 md:py-24 bg-[#e1e1e1] dark:bg-[#101010] text-gray-800 dark:text-white overflow-hidden">
             <div class="container mx-auto px-6">
                 <h2 class="reveal text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Certificados e <span class="text-orange-600">Conquistas</span></h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div id="achievements-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <div class="skill-card hover-plat1 reveal delay-100 p-5 md:p-6 flex flex-col h-full rounded-xl shadow-lg bg-white dark:bg-[#1f1f1f] border-t-4 border-t-orange-600 dark:border-t-orange-600 transition duration-300 hover:shadow-xl hover:shadow-orange-500/20">
                         <div class="mb-4 md:mb-6 pb-3 md:pb-4 border-b border-gray-200 dark:border-gray-700 flex flex-col items-center">
                             <div class="tech-icon-placeholder h-10 md:h-12 w-28 md:w-32 mb-1 md:mb-2" style="background:#EA580C; font-size:.8rem; border-radius:.25rem;">Plataformas</div>
@@ -376,9 +389,9 @@
                     <div class="reveal from-right delay-300 p-6 md:p-8 skill-card h-full flex flex-col">
                         <h3 class="text-xl md:text-2xl font-bold mb-6">Envie uma Mensagem</h3>
                         <form id="contact-form" class="space-y-4 md:space-y-6 flex-grow flex flex-col">
-                            <div><label for="name" class="sr-only">Nome</label><input type="text" name="name" id="name" required placeholder="Seu Nome" class="form-input text-sm md:text-base"></div>
-                            <div><label for="email" class="sr-only">Email</label><input type="email" name="email" id="email" required placeholder="Seu Email" class="form-input text-sm md:text-base"></div>
-                            <div class="flex-grow"><label for="message" class="sr-only">Mensagem</label><textarea name="message" id="message" rows="5" required placeholder="Sua Mensagem" class="form-input h-full min-h-[120px] text-sm md:text-base resize-none"></textarea></div>
+                            <div><label for="name" class="sr-only">Nome</label><input type="text" name="name" id="name" required autocomplete="name" placeholder="Seu nome" class="form-input text-sm md:text-base"></div>
+                            <div><label for="email" class="sr-only">E-mail</label><input type="email" name="email" id="email" required autocomplete="email" placeholder="Seu e-mail" class="form-input text-sm md:text-base"></div>
+                            <div class="flex-grow"><label for="message" class="sr-only">Mensagem</label><textarea name="message" id="message" rows="5" required placeholder="Sua mensagem" class="form-input h-full min-h-[120px] text-sm md:text-base resize-none"></textarea></div>
                             <div class="pt-2"><button type="submit" class="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-bold text-sm md:text-base bg-accent-gradient shadow-glow transform transition-all duration-300 hover:scale-[1.02]">Enviar Mensagem<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 3 9-3 9 19-9Z"></path><path d="M6 12h16"></path></svg></button></div>
                         </form>
                     </div>
@@ -397,15 +410,16 @@
                         <span>Desenvolvido por Diego Santiago</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-orange-500"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
                     </div>
-                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-0">Desenvolvedor FullStack Júnior | HTML, CSS, JavaScript | Node.js & Java</p>
-                    <p class="text-xs text-gray-500 dark:text-gray-600">&copy; 2025 Diego Santiago. Todos os direitos reservados.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-0">Desenvolvedor FullStack | HTML, CSS, JavaScript | Node.js & Java</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-600">&copy; 2026 Diego Santiago. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div id="toast" class="toast"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-        <script src="js/main.js" defer></script>
+    <script src="js/portfolio-data.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

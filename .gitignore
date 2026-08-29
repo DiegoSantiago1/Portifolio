@@ -1,0 +1,11 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Arquivos temporários e de publicação local
+dist/
+*.log
+
+# Currículo pessoal: mantenha a versão final fora do repositório se preferir
+# assets/documents/curriculo-diego-santiago.pdf
