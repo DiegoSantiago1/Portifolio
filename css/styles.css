@@ -1387,3 +1387,27 @@ html:not(.dark) .theme-moon {
     }
 
 }
+
+/* =========================================
+   CORES PERSONALIZADAS - DADOS E FERRAMENTAS
+   ========================================= */
+
+/* PANDAS - AZUL ESCURO */
+.skill-pandas {
+    --skill-color: 30 64 175;
+}
+
+/* NUMPY - AZUL CLARO */
+.skill-numpy {
+    --skill-color: 14 165 233;
+}
+
+/* POWER BI - AMARELO */
+.skill-powerbi {
+    --skill-color: 234 179 8;
+}
+
+/* EXCEL - VERDE */
+.skill-excel {
+    --skill-color: 22 163 74;
+}
