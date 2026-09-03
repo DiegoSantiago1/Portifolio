@@ -1411,3 +1411,134 @@ html:not(.dark) .theme-moon {
 .skill-excel {
     --skill-color: 22 163 74;
 }
+
+/* =========================================================
+   PARTICIPAÇÕES EM EVENTOS
+========================================================= */
+
+.event-card {
+    position: relative;
+    background: linear-gradient(145deg, #141414, #0d0d0d);
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+    overflow: hidden;
+}
+
+
+/* BRILHO ANIMADO */
+
+.event-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.07),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left .8s ease;
+
+    pointer-events: none;
+}
+
+
+.event-card:hover::before {
+    left: 140%;
+}
+
+
+/* HOVER */
+
+.event-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #ff7a00;
+
+    box-shadow:
+        0 0 20px rgba(255, 122, 0, 0.18),
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* RODAPÉ DO CARD */
+
+.event-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #9ca3af;
+
+    font-size: 0.875rem;
+}
+
+
+/* INFORMAÇÕES */
+
+.event-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+
+/* DESTAQUE DO RESULTADO */
+
+.event-position {
+    color: #d1d5db;
+
+    font-weight: 500;
+}
+
+
+.event-position svg {
+    color: #ff7a00;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 767px) {
+
+    .event-card {
+        padding: 1.25rem;
+    }
+
+    .event-footer {
+        flex-direction: row;
+
+        align-items: center;
+
+        font-size: 0.8rem;
+    }
+
+}
