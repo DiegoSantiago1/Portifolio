@@ -1,11 +1,12 @@
 window.PORTFOLIO_DATA = {
     projects: [
         {
-            title: 'Projeto em desenvolvimento',
-            category: 'fullstack',
-            tags: ['Em breve', 'FullStack'],
-            description: 'Um novo projeto full-stack está sendo preparado. Os detalhes e o repositório serão publicados quando estiverem prontos.',
-            image: 'assets/images/project-in-development.png'
+            title: 'Painel de Vendas — Honda',
+            category: 'dados fullstack',
+            tags: ['PostgreSQL', 'SQL', 'Node.js/TS', 'Docker'],
+            description: 'Painel analítico de vendas para uma rede fictícia de concessionárias: metas por loja, ranking de vendedores, mix de modelos e calendário de vendas. Banco modelado do zero, API REST própria e agregações em SQL — dados 100% sintéticos, sem informação real da empresa.',
+            image: 'assets/images/painel-vendas-honda.png',
+            link: 'https://github.com/DiegoSantiago1/analise-vendas-concessionaria'
         },
         {
             title: 'Projeto em desenvolvimento',

@@ -33,7 +33,9 @@ function renderPortfolioContent() {
                     </div>
                     <div class="p-4 md:p-5 pb-6 md:pb-10 flex-grow flex flex-col bg-inherit border-x-2 border-b-2 border-gray-300 dark:border-gray-600 rounded-b-xl">
                         <p class="text-xs md:text-sm text-gray-700 dark:text-gray-300 mb-4 flex-grow leading-relaxed">${escapeHtml(project.description)}</p>
-                        <span class="project-button w-full text-sm" aria-disabled="true"><span>Em desenvolvimento</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+                        ${project.link
+                            ? `<a href="${escapeHtml(project.link)}" target="_blank" rel="noopener noreferrer" class="project-button w-full text-sm"><span>Ver no GitHub</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>`
+                            : `<span class="project-button w-full text-sm" aria-disabled="true"><span>Em desenvolvimento</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>`}
                     </div>
                 </div>
             </article>

@@ -11,7 +11,7 @@ Atualmente, estou em constante evolução na área de desenvolvimento de softwar
 ## 🌐 Portfólio
 
 🔗 **Acesse meu portfólio:**  
-Em breve disponível online.
+https://diegosantiago1.github.io/Portifolio/
 
 ---
 
@@ -130,7 +130,11 @@ Novas certificações serão adicionadas conforme minha evolução profissional.
 
 ## 📂 Projetos
 
-Esta seção será atualizada conforme novos projetos forem desenvolvidos.
+### ✅ Painel de Vendas — Concessionária Honda
+
+Painel analítico de vendas para uma rede fictícia de concessionárias: PostgreSQL, API REST em Node.js/TypeScript e front-end com Chart.js.
+
+🔗 [github.com/DiegoSantiago1/analise-vendas-concessionaria](https://github.com/DiegoSantiago1/analise-vendas-concessionaria)
 
 ### 🔨 Em desenvolvimento
 
@@ -146,7 +150,7 @@ Estou atualmente desenvolvendo novos projetos para aplicar meus conhecimentos de
 - Análise de dados
 - Automação
 
-Em breve, os projetos estarão disponíveis neste portfólio e no meu GitHub.
+Novos projetos entram aqui e no meu GitHub conforme forem concluídos.
 
 ---
 
