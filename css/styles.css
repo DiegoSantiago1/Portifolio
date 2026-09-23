@@ -72,9 +72,7 @@
 .skill-blue { --skill-color: 37 99 235 }
 .skill-yellow { --skill-color: 234 179 8 }
 .skill-green { --skill-color: 22 163 74 }
-.skill-gray { --skill-color: 107 114 128 }
-/* O ícone do Express é preto: some no fundo escuro sem esse ajuste. */
-.dark .devicon-express-original.colored { color: #e5e7eb }
+.skill-purple { --skill-color: 167 139 250 }
 
 /* Tags de tecnologia dos cards de projeto: cor da marca de cada uma.
    Tag sem cor definida aqui cai no cinza padrão. */
