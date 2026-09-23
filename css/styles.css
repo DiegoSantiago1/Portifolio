@@ -72,6 +72,31 @@
 .skill-blue { --skill-color: 37 99 235 }
 .skill-yellow { --skill-color: 234 179 8 }
 .skill-green { --skill-color: 22 163 74 }
+.skill-gray { --skill-color: 107 114 128 }
+/* O ícone do Express é preto: some no fundo escuro sem esse ajuste. */
+.dark .devicon-express-original.colored { color: #e5e7eb }
+
+/* Tags de tecnologia dos cards de projeto: cor da marca de cada uma.
+   Tag sem cor definida aqui cai no cinza padrão. */
+.project-tag {
+    background: rgba(107,114,128,.9);
+    color: #fff;
+    font-weight: 600
+}
+.tag-java { background: #dc2626 }
+.tag-swing { background: #2563eb }
+.tag-cheerpj { background: #f97316 }
+.tag-vercel { background: #1f1f22 }
+.tag-php { background: #7e22ce }
+.tag-laravel { background: #b91c1c }
+.tag-postgresql { background: #2563eb }
+.tag-sql { background: #0f766e }
+.tag-tailwind { background: #60a5fa }
+.tag-js, .tag-javascript { background: #eab308; color: #111827 }
+.tag-node-js { background: #16a34a }
+.tag-typescript { background: #3178c6 }
+.tag-docker { background: #0284c7 }
+.tag-python { background: #ca8a04; color: #111827 }
 @media(max-width:767px) {
     .skill-tech-item {
         padding: .75rem .5rem!important

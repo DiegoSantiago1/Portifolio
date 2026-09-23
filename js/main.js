@@ -17,6 +17,10 @@ function escapeHtml(value) {
     }[character]));
 }
 
+function tagSlug(tag) {
+    return String(tag).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 function renderPortfolioContent() {
     const data = window.PORTFOLIO_DATA;
     if (!data) return;
@@ -29,7 +33,7 @@ function renderPortfolioContent() {
                     <div class="project-visuals relative h-48 md:h-72">
                         <div class="project-image-wrapper absolute inset-0 border-x-2 border-t-2 border-gray-300 dark:border-gray-600 rounded-t-xl overflow-hidden"><img src="${escapeHtml(project.image)}" alt="Interface abstrata representando ${escapeHtml(project.title.toLowerCase())}" class="project-image" loading="lazy" width="1536" height="1024"></div>
                         <div class="project-header skill-card absolute top-0 left-0 right-0 z-20 p-4 rounded-b-none border-b-0"><h3 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white truncate">${escapeHtml(project.title)}</h3></div>
-                        <div class="project-footer-tags skill-card absolute -bottom-2 left-0 right-0 z-20 p-3 md:p-4 rounded-t-none border-t-0"><div class="flex flex-wrap gap-1.5 md:gap-2">${project.tags.map((tag) => `<span class="text-[10px] md:text-xs bg-gray-500/90 text-white px-2 py-1 rounded">${escapeHtml(tag)}</span>`).join('')}</div></div>
+                        <div class="project-footer-tags skill-card absolute -bottom-2 left-0 right-0 z-20 p-3 md:p-4 rounded-t-none border-t-0"><div class="flex flex-wrap gap-1.5 md:gap-2">${project.tags.map((tag) => `<span class="project-tag tag-${tagSlug(tag)} text-[10px] md:text-xs px-2 py-1 rounded">${escapeHtml(tag)}</span>`).join('')}</div></div>
                     </div>
                     <div class="p-4 md:p-5 pb-6 md:pb-10 flex-grow flex flex-col bg-inherit border-x-2 border-b-2 border-gray-300 dark:border-gray-600 rounded-b-xl">
                         <p class="text-xs md:text-sm text-gray-700 dark:text-gray-300 mb-4 flex-grow leading-relaxed">${escapeHtml(project.description)}</p>
