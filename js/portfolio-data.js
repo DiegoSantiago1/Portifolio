@@ -4,9 +4,10 @@ window.PORTFOLIO_DATA = {
             title: 'Painel de Vendas — Honda',
             category: 'dados fullstack',
             tags: ['PostgreSQL', 'SQL', 'Node.js', 'TypeScript', 'Docker'],
-            description: 'Projeto real, pedido no meu trabalho e em uso em algumas concessionárias Honda de Recife: acompanha vendas do dia, metas por loja, ranking de vendedores e mix de modelos. Esta é a versão reconstruída para o portfólio, com banco PostgreSQL, API REST própria e dados 100% fictícios, sem nenhuma informação da empresa.',
+            description: 'Projeto real, pedido no meu trabalho e em uso em algumas concessionárias Honda de Recife: acompanha vendas do dia, metas por loja, ranking de vendedores e mix de modelos. Esta é a versão reconstruída para o portfólio, com dados 100% fictícios. A demo roda no navegador; o banco PostgreSQL e a API REST completos estão no GitHub.',
             image: 'assets/images/painel-vendas-honda.png',
-            link: 'https://github.com/DiegoSantiago1/analise-vendas-concessionaria'
+            link: 'projetos/painel-vendas/',
+            repo: 'https://github.com/DiegoSantiago1/analise-vendas-concessionaria'
         },
         {
             title: 'Projeto em desenvolvimento',

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Vendas — Grupo Horizonte Honda</title>
+  <meta name="description" content="Painel analítico de vendas de uma rede fictícia de concessionárias: metas, ranking por loja e vendedor, vendas por dia e mix de modelos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="celebracao" id="celebracaoVenda" aria-live="polite"></div>
+
+<div class="app">
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="sidebar">
+    <div class="marca">
+      <span class="marca-icone">H</span>
+      <div>
+        <strong>Horizonte</strong>
+        <small>Honda</small>
+      </div>
+    </div>
+
+    <nav class="nav-principal">
+      <button class="nav-item active" data-view="painel" title="Painel"><span class="nav-ic">▦</span><span class="nav-rotulo">Painel</span></button>
+      <button class="nav-item" data-view="lancamento" title="Lançar venda"><span class="nav-ic">✎</span><span class="nav-rotulo">Lançar venda</span></button>
+    </nav>
+
+    <div class="sidebar-secao">Lojas</div>
+    <div class="lista-lojas" id="listaLojas"></div>
+
+    <div class="sidebar-rodape">
+      <span class="badge-live"><span class="dot"></span> ao vivo</span>
+      <small>dados fictícios</small>
+    </div>
+  </aside>
+
+  <!-- ==================== CONTEÚDO ==================== -->
+  <div class="conteudo">
+
+    <header class="topbar">
+      <div class="breadcrumb">
+        <span>Painel</span> <i>/</i> <strong id="bcEscopo">Todas as lojas</strong>
+      </div>
+
+      <div class="seletor-mes">
+        <button id="mesAnterior" aria-label="Mês anterior">‹</button>
+        <span id="rotuloMes">—</span>
+        <button id="mesProximo" aria-label="Próximo mês">›</button>
+      </div>
+
+      <div class="topbar-dir">
+        <span id="dataHoje" class="chip"></span>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ VIEW: PAINEL ============ -->
+      <section class="view active" id="view-painel">
+
+        <div class="grid-topo">
+          <article class="card card-donut">
+            <h3>Meta do mês</h3>
+            <div class="donut-wrap">
+              <canvas id="donutMeta"></canvas>
+              <div class="donut-centro"><b id="donutMetaPct">0%</b><small>atingido</small></div>
+            </div>
+            <p class="card-legenda" id="legendaMeta">—</p>
+          </article>
+
+          <article class="card card-donut">
+            <h3>Mix por categoria</h3>
+            <div class="donut-wrap">
+              <canvas id="donutCategoria"></canvas>
+              <div class="donut-centro"><b id="donutCategoriaTotal">0</b><small>carros</small></div>
+            </div>
+            <p class="card-legenda" id="legendaCategoria">—</p>
+          </article>
+
+          <article class="card card-donut">
+            <h3>Forma de pagamento</h3>
+            <div class="donut-wrap">
+              <canvas id="donutPagamento"></canvas>
+              <div class="donut-centro"><b id="donutPagamentoPct">0%</b><small>financiado</small></div>
+            </div>
+            <p class="card-legenda" id="legendaPagamento">—</p>
+          </article>
+
+          <article class="card card-destaque">
+            <h3>Faturamento no mês</h3>
+            <div class="numero-gigante" id="kpiFaturamento">R$ 0</div>
+            <div class="sub-kpis">
+              <div><small>Vendas</small><b id="kpiVendas">0</b></div>
+              <div><small>Ticket médio</small><b id="kpiTicket">R$ 0</b></div>
+              <div><small>Dias com venda</small><b id="kpiDias">0</b></div>
+            </div>
+          </article>
+
+          <article class="card card-barras">
+            <h3>Modelos mais vendidos</h3>
+            <div id="barrasModelos" class="barras-lista"></div>
+          </article>
+        </div>
+
+        <div class="grid-meio">
+          <article class="card">
+            <div class="card-cabecalho">
+              <h3>Vendas por dia</h3>
+              <span class="card-nota" id="notaVendasDia">—</span>
+            </div>
+            <div class="chart-box chart-box--alto"><canvas id="chartDiario"></canvas></div>
+          </article>
+
+          <article class="card">
+            <h3>Ranking de lojas</h3>
+            <div class="chart-box"><canvas id="chartLojas"></canvas></div>
+          </article>
+        </div>
+
+        <div class="grid-baixo">
+          <article class="card">
+            <div class="card-cabecalho">
+              <h3>Calendário de vendas</h3>
+              <span class="card-nota">intensidade = nº de carros</span>
+            </div>
+            <div class="calendario" id="calendario"></div>
+            <div class="calendario-escala">
+              <small>menos</small>
+              <span class="escala-caixa n0"></span>
+              <span class="escala-caixa n1"></span>
+              <span class="escala-caixa n2"></span>
+              <span class="escala-caixa n3"></span>
+              <span class="escala-caixa n4"></span>
+              <small>mais</small>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Top vendedores</h3>
+            <div id="listaVendedores" class="ranking-lista"></div>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Metas por loja</h3>
+          <div class="aneis-grid" id="aneisMetas"></div>
+        </article>
+
+      </section>
+
+      <!-- ============ VIEW: LANÇAMENTO ============ -->
+      <section class="view" id="view-lancamento">
+        <article class="card">
+          <h3>Registrar venda</h3>
+          <form id="formVenda" class="form-grid">
+            <div>
+              <label for="selLoja">Loja</label>
+              <select id="selLoja" required></select>
+            </div>
+            <div>
+              <label for="selVendedor">Vendedor</label>
+              <select id="selVendedor" required></select>
+            </div>
+            <div>
+              <label for="selModelo">Modelo</label>
+              <select id="selModelo" required></select>
+            </div>
+            <div>
+              <label for="selFormaPagamento">Pagamento</label>
+              <select id="selFormaPagamento" required>
+                <option value="A vista">À vista</option>
+                <option value="Financiado">Financiado</option>
+                <option value="Consorcio">Consórcio</option>
+              </select>
+            </div>
+            <div>
+              <label for="numQtd">Quantidade</label>
+              <input id="numQtd" type="number" min="1" value="1" required>
+            </div>
+            <div>
+              <label for="txtCliente">Cliente (opcional)</label>
+              <input id="txtCliente" type="text" placeholder="Nome do cliente">
+            </div>
+            <div class="btn-row">
+              <button type="submit" class="btn-primary">Registrar venda</button>
+              <button type="button" class="btn-secondary" id="btnDesfazer">Desfazer última</button>
+            </div>
+          </form>
+          <p class="status-msg" id="statusVenda"></p>
+        </article>
+
+        <article class="card">
+          <h3>Cadastro rápido de vendedor</h3>
+          <form id="formVendedor" class="form-grid">
+            <div>
+              <label for="cadLoja">Loja</label>
+              <select id="cadLoja" required></select>
+            </div>
+            <div>
+              <label for="cadNome">Nome do vendedor</label>
+              <input id="cadNome" type="text" required>
+            </div>
+            <div class="btn-row">
+              <button type="submit" class="btn-secondary">Adicionar ao cadastro</button>
+            </div>
+          </form>
+          <p class="status-msg" id="statusVendedor"></p>
+        </article>
+
+        <article class="card">
+          <h3>Últimos lançamentos</h3>
+          <div class="feed-scroll" id="feedUltimos"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="js/demo-api.js"></script>
+<script src="js/app.js"></script>
+
+<aside id="avisoDemo" style="position:fixed;right:16px;bottom:16px;z-index:60;max-width:330px;display:flex;gap:10px;align-items:flex-start;padding:11px 12px 11px 14px;border-radius:12px;background:rgba(10,4,5,.94);border:1px solid rgba(255,99,99,.35);color:#f7eeee;font:12.5px/1.45 'Outfit','Segoe UI',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.5)">
+  <span><b>Demo com dados fictícios.</b> O que você lançar aqui fica só no seu navegador.
+    <a href="https://github.com/DiegoSantiago1/analise-vendas-concessionaria" target="_blank" rel="noopener noreferrer" style="color:#ffd166">Ver código no GitHub ↗</a></span>
+  <button type="button" aria-label="Fechar aviso" onclick="this.parentElement.remove()" style="all:unset;cursor:pointer;color:#cc9a9c;font-size:18px;line-height:1;padding:0 2px">×</button>
+</aside>
+</body>
+</html>
