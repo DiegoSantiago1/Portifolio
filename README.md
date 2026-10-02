@@ -17,9 +17,7 @@ https://diegosantiago1.github.io/Portifolio/
 
 ## 🧑‍💻 Sobre mim
 
-Trabalho com dados no dia a dia: transformo planilhas e processos manuais em **informação confiável, indicadores e painéis** que apoiam decisões. Na Honda, criei o painel de vendas adotado por concessionárias de Recife; na Força Aérea, desenvolvi o sistema de controle de cautelas da seção de material, que segue em uso, e os relatórios de estoque das reuniões com os superiores.
-
-Cuido do caminho inteiro do dado: modelagem e consultas em **SQL e PostgreSQL**, tratamento e análise com **Python (Pandas)**, checagens de qualidade e **Power BI** para transformar números em respostas de negócio. Programação com **Node.js e TypeScript** é meu diferencial. Sou estudante de **Análise e Desenvolvimento de Sistemas** e meu próximo passo é a **Engenharia de Dados**: pipelines, Docker e nuvem.
+Analista de dados com base em **SQL, PostgreSQL, Python e Power BI**, focado em transformar dados brutos em informação confiável e em decisões de negócio. Uso **Node.js e TypeScript** como diferencial para levar os dados até a aplicação e sigo em direção à **Engenharia de Dados**: pipelines, Docker e nuvem.
 
 ---
 
