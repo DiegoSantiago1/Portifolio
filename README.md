@@ -4,7 +4,7 @@ Bem-vindo ao meu portfólio profissional! 🚀
 
 Este projeto foi desenvolvido para apresentar minha trajetória profissional, habilidades, experiências, certificações e projetos na área de tecnologia.
 
-Atualmente, estou em constante evolução na área de desenvolvimento de software, com foco em desenvolvimento Full Stack, Backend, análise de dados e automação de processos.
+Atuo como Analista de Dados e sigo em direção à Engenharia de Dados, com SQL, PostgreSQL, Python e Power BI como base e Node.js/TypeScript como diferencial.
 
 ---
 
@@ -17,13 +17,9 @@ https://diegosantiago1.github.io/Portifolio/
 
 ## 🧑‍💻 Sobre mim
 
-Sou estudante de **Análise e Desenvolvimento de Sistemas** e desenvolvedor em constante evolução.
+Transformo processos manuais em dados confiáveis e em sistemas que as pessoas usam de verdade. Na Força Aérea, desenvolvi o sistema de controle de cautelas da seção de material, que segue em uso; na Honda, criei o painel de vendas adotado por concessionárias de Recife.
 
-Tenho experiência com desenvolvimento web utilizando **HTML, CSS e JavaScript**, e atualmente venho ampliando meus conhecimentos em **TypeScript, Node.js, Python, análise de dados e automação de processos**.
-
-Também possuo experiência profissional na área administrativa, trabalhando com análise e organização de dados, Excel, Power BI e otimização de processos.
-
-Meu objetivo é unir tecnologia e conhecimento de negócio para desenvolver soluções eficientes, automatizar tarefas e transformar dados em informações úteis para a tomada de decisões.
+Construo projetos de ponta a ponta com **SQL, PostgreSQL, Python e Power BI**, da modelagem do banco ao dashboard, e uso **Node.js e TypeScript** para levar os dados até a aplicação. Sou estudante de **Análise e Desenvolvimento de Sistemas** e meu próximo passo é a **Engenharia de Dados**: pipelines, Docker e nuvem.
 
 ---
 
@@ -67,7 +63,7 @@ Meu objetivo é unir tecnologia e conhecimento de negócio para desenvolver solu
 
 ## 💼 Experiência
 
-### Analista Administrativo de Vendas I — Autoline Honda
+### Analista de Dados I — Autoline Honda
 
 Atuação com:
 
