@@ -13,7 +13,7 @@ window.PORTFOLIO_DATA = {
             title: 'Controle de Materiais e Cautela',
             category: 'dados fullstack',
             tags: ['PostgreSQL', 'SQL', 'Python', 'Power BI', 'TypeScript', 'Docker'],
-            description: 'Inspirado nos meus 6 anos de controle de material na Força Aérea: quem está com cada equipamento, o que está atrasado, o que sobra e o que falta. Banco PostgreSQL com as regras e o histórico imutável, quatro análises em SQL e Python, dois relatórios no Power BI e um sistema web de retirada e devolução com perfis de acesso. Dados 100% fictícios; código, análises e prints no GitHub.',
+            description: 'Projeto real: na seção de material em que trabalhei na Força Aérea, as cautelas eram feitas no papel e na caneta. Desenvolvi o sistema que substituiu o papel e continua em uso, e os relatórios das reuniões com os superiores para controlar o estoque. Esta é a versão reconstruída para o portfólio, com dados 100% fictícios: banco PostgreSQL com histórico imutável, análises em SQL e Python, dois relatórios no Power BI e o sistema web de retirada e devolução com perfis de acesso.',
             image: 'assets/images/controle-materiais-cautela.png',
             link: 'https://github.com/DiegoSantiago1/controle-materiais-cautela'
         },
