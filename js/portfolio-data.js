@@ -10,11 +10,12 @@ window.PORTFOLIO_DATA = {
             repo: 'https://github.com/DiegoSantiago1/analise-vendas-concessionaria'
         },
         {
-            title: 'Projeto em desenvolvimento',
-            category: 'backend',
-            tags: ['Em breve', 'Back-end'],
-            description: 'Um novo projeto de back-end está em construção. Em breve haverá informações sobre arquitetura, tecnologias e funcionalidades.',
-            image: 'assets/images/project-in-development.png'
+            title: 'Controle de Materiais e Cautela',
+            category: 'dados fullstack',
+            tags: ['PostgreSQL', 'SQL', 'Python', 'Power BI', 'TypeScript', 'Docker'],
+            description: 'Inspirado nos meus 6 anos de controle de material na Força Aérea: quem está com cada equipamento, o que está atrasado, o que sobra e o que falta. Banco PostgreSQL com as regras e o histórico imutável, quatro análises em SQL e Python, dois relatórios no Power BI e um sistema web de retirada e devolução com perfis de acesso. Dados 100% fictícios; código, análises e prints no GitHub.',
+            image: 'assets/images/controle-materiais-cautela.png',
+            link: 'https://github.com/DiegoSantiago1/controle-materiais-cautela'
         },
         {
             title: 'Projeto em desenvolvimento',
