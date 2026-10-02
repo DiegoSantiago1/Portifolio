@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://diegosantiago1.github.io/Portifolio/sitemap.xml

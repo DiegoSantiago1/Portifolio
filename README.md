@@ -128,38 +128,30 @@ Novas certificações serão adicionadas conforme minha evolução profissional.
 
 Painel analítico de vendas para uma rede fictícia de concessionárias: PostgreSQL, API REST em Node.js/TypeScript e front-end com Chart.js.
 
-🔗 [github.com/DiegoSantiago1/analise-vendas-concessionaria](https://github.com/DiegoSantiago1/analise-vendas-concessionaria)
+🔗 [Demo online](https://diegosantiago1.github.io/Portifolio/projetos/painel-vendas/) · [github.com/DiegoSantiago1/analise-vendas-concessionaria](https://github.com/DiegoSantiago1/analise-vendas-concessionaria)
 
-### 🔨 Em desenvolvimento
+### ✅ Controle de Materiais e Cautela
 
-Estou atualmente desenvolvendo novos projetos para aplicar meus conhecimentos de:
+Reconstrução, com dados fictícios, do sistema de controle de cautelas que desenvolvi na seção de material da Força Aérea: PostgreSQL com histórico imutável, análises em SQL e Python, dois relatórios no Power BI e o sistema web de retirada e devolução.
 
-- JavaScript
-- TypeScript
-- Node.js
-- React
-- Python
-- SQL
-- Power BI
-- Análise de dados
-- Automação
+🔗 [Demo online](https://diegosantiago1.github.io/Portifolio/projetos/controle-materiais/) · [github.com/DiegoSantiago1/controle-materiais-cautela](https://github.com/DiegoSantiago1/controle-materiais-cautela)
 
-Novos projetos entram aqui e no meu GitHub conforme forem concluídos.
+### 🔨 Próximo
+
+Customer Analytics: segmentação RFM, churn e valor do cliente, com SQL, Python e Power BI.
 
 ---
 
 ## 🎯 Objetivos
 
-Atualmente, meu objetivo é continuar evoluindo profissionalmente na área de tecnologia, desenvolvendo experiência prática e construindo projetos que demonstrem minhas habilidades.
+Meu objetivo é crescer como analista de dados e seguir para a Engenharia de Dados, com projetos reais que mostram o caminho inteiro do dado: do banco ao relatório.
 
 Tenho interesse principalmente em:
 
-- Desenvolvimento Full Stack
-- Backend com Node.js
-- TypeScript
-- Python
-- Análise de Dados
-- Business Intelligence
+- Análise de Dados (SQL, PostgreSQL, Python)
+- Business Intelligence (Power BI)
+- Engenharia de Dados (pipelines, Docker e nuvem)
+- Backend com Node.js e TypeScript como diferencial
 - Automação de processos
 - Desenvolvimento de soluções para problemas reais
 
