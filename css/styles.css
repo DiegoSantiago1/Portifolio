@@ -96,6 +96,8 @@
 .tag-docker { background: #0284c7 }
 .tag-python { background: #ca8a04; color: #111827 }
 .tag-power-bi { background: #f2c811; color: #111827 }
+.tag-dbt { background: #ff694b; color: #111827 }
+.tag-github-actions { background: #1f6feb }
 @media(max-width:767px) {
     .skill-tech-item {
         padding: .75rem .5rem!important

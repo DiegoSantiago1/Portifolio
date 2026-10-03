@@ -28,6 +28,15 @@ window.PORTFOLIO_DATA = {
             repo: 'https://github.com/DiegoSantiago1/customer-analytics-online-retail'
         },
         {
+            title: 'Pipeline das Bicicletas de Londres',
+            category: 'dados',
+            tags: ['Python', 'PostgreSQL', 'SQL', 'dbt', 'Docker', 'GitHub Actions'],
+            description: 'Dados reais e públicos das bicicletas de Londres (TfL Santander Cycles): onde as estações ficam vazias ou cheias, quando, e onde a operação deve agir primeiro. Um pipeline coleta as cerca de 800 estações a cada 15 minutos e guarda o dado bruto intocado; 41 milhões de viagens entram por carga incremental, que não duplica nada se rodar duas vezes. As transformações são em dbt com testes, e a página se refaz sozinha todo dia, com mapa por hora, ranking e a saúde do próprio pipeline. O código completo está no GitHub.',
+            image: 'assets/images/london-cycle-hire-pipeline.jpg',
+            link: 'https://diegosantiago1.github.io/london-cycle-hire-pipeline/',
+            repo: 'https://github.com/DiegoSantiago1/london-cycle-hire-pipeline'
+        },
+        {
             title: 'Projeto em desenvolvimento',
             category: 'frontend',
             tags: ['Em breve', 'Front-end'],
