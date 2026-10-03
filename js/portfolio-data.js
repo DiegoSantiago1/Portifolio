@@ -19,6 +19,15 @@ window.PORTFOLIO_DATA = {
             repo: 'https://github.com/DiegoSantiago1/controle-materiais-cautela'
         },
         {
+            title: 'Customer Analytics — Varejo Online',
+            category: 'dados',
+            tags: ['PostgreSQL', 'SQL', 'Python', 'Power BI', 'Docker'],
+            description: 'Dados reais e públicos de uma loja online do Reino Unido de presentes e utilidades, com muitos clientes lojistas: 1 milhão de linhas de vendas em dois anos. Respondi quem são os melhores clientes (segmentação RFM), quem está indo embora (churn), se a retenção melhora (coortes) e quanto cada cliente vale (CLV), e conferi cada resposta contra o que de fato aconteceu depois. SQL versionado no PostgreSQL, 280 testes e relatório no Power BI. A página interativa abre no navegador; o código completo está no GitHub.',
+            image: 'assets/images/customer-analytics-online-retail.png',
+            link: 'https://diegosantiago1.github.io/customer-analytics-online-retail/',
+            repo: 'https://github.com/DiegoSantiago1/customer-analytics-online-retail'
+        },
+        {
             title: 'Projeto em desenvolvimento',
             category: 'frontend',
             tags: ['Em breve', 'Front-end'],

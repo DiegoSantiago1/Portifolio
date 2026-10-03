@@ -136,9 +136,11 @@ Reconstrução, com dados fictícios, do sistema de controle de cautelas que des
 
 🔗 [Demo online](https://diegosantiago1.github.io/Portifolio/projetos/controle-materiais/) · [github.com/DiegoSantiago1/controle-materiais-cautela](https://github.com/DiegoSantiago1/controle-materiais-cautela)
 
-### 🔨 Próximo
+### ✅ Customer Analytics — Varejo Online
 
-Customer Analytics: segmentação RFM, churn e valor do cliente, com SQL, Python e Power BI.
+Dados reais de uma loja online do Reino Unido (UCI Online Retail II, 1 milhão de linhas): segmentação RFM, churn validado no tempo, coortes de retenção e valor do cliente (CLV), com PostgreSQL, SQL, Python e Power BI.
+
+🔗 [Página interativa](https://diegosantiago1.github.io/customer-analytics-online-retail/) · [github.com/DiegoSantiago1/customer-analytics-online-retail](https://github.com/DiegoSantiago1/customer-analytics-online-retail)
 
 ---
 
