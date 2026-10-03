@@ -8,10 +8,12 @@ Atuo como Analista de Dados e sigo em direção à Engenharia de Dados, com SQL,
 
 ---
 
-## 🌐 Portfólio
+## 🔗 Acessar o portfólio
 
-🔗 **Acesse meu portfólio:**  
-https://diegosantiago1.github.io/Portifolio/
+[![Abrir o portfólio](https://img.shields.io/badge/%E2%96%B6%20Abrir%20o%20portf%C3%B3lio-EA580C?style=for-the-badge)](https://diegosantiago1.github.io/Portifolio/)
+[![Ver os projetos](https://img.shields.io/badge/Ver%20os%20projetos-1F2937?style=for-the-badge&logo=googlechrome&logoColor=white)](https://diegosantiago1.github.io/Portifolio/#projetos)
+
+**Link direto:** https://diegosantiago1.github.io/Portifolio/
 
 ---
 
