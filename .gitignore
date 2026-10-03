@@ -9,3 +9,6 @@ dist/
 
 # Currículo pessoal: mantenha a versão final fora do repositório se preferir
 # assets/documents/curriculo-diego-santiago.pdf
+
+# Dependências do build do CSS (npm install)
+node_modules/

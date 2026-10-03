@@ -222,3 +222,14 @@ Os próximos passos são:
 Este projeto foi desenvolvido para fins de apresentação profissional e portfólio pessoal.
 
 © 2026 Diego Santiago
+
+## CSS (Tailwind)
+
+O Tailwind é gerado por build, não pelo CDN de desenvolvimento. Depois de mudar classes no `index.html` ou em `js/`:
+
+```bash
+npm install        # uma vez
+npm run build:css  # gera css/tailwind.css (versionado: o GitHub Pages serve os arquivos sem build)
+```
+
+O `css/tailwind.css` é carregado depois do `css/styles.css`, como o CDN fazia, para os utilitários do Tailwind valerem sobre as regras do `styles.css`.

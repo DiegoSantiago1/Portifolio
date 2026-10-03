@@ -1,0 +1,12 @@
+{
+  "name": "portifolio",
+  "private": true,
+  "description": "Portfólio de Diego Freitas Santiago. O CSS do Tailwind é gerado por build (não pelo CDN de desenvolvimento).",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind.input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind.input.css -o ./css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

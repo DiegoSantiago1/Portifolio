@@ -26,13 +26,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: { extend: { fontFamily: { sans: ['IBM Plex Sans', 'sans-serif'] } } }
-        }
-    </script>
     <script>
         if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
             document.documentElement.classList.remove('dark')
@@ -41,6 +34,10 @@
         }
     </script>
         <link rel="stylesheet" href="css/styles.css">
+    <!-- Tailwind gerado por build (npm run build:css), não pelo CDN de desenvolvimento.
+         Fica DEPOIS do styles.css, como o CDN (que injetava o CSS no fim do head): os
+         utilitários do Tailwind precisam vencer as regras do styles.css. -->
+    <link rel="stylesheet" href="css/tailwind.css">
 
 </head>
 
