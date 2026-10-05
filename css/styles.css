@@ -98,6 +98,8 @@
 .tag-power-bi { background: #f2c811; color: #111827 }
 .tag-dbt { background: #ff694b; color: #111827 }
 .tag-github-actions { background: #1f6feb }
+.tag-ia-llm { background: #c5f03a; color: #111827 }
+.tag-react { background: #61dafb; color: #111827 }
 @media(max-width:767px) {
     .skill-tech-item {
         padding: .75rem .5rem!important

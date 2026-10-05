@@ -37,6 +37,15 @@ window.PORTFOLIO_DATA = {
             repo: 'https://github.com/DiegoSantiago1/london-cycle-hire-pipeline'
         },
         {
+            title: 'AI Business Analyst — Vendas',
+            category: 'dados backend fullstack',
+            tags: ['IA (LLM)', 'TypeScript', 'Node.js', 'PostgreSQL', 'Python', 'React', 'Docker'],
+            description: 'Um analista de dados com IA para uma rede de concessionárias: o gerente pergunta em português e a IA consulta o banco PostgreSQL só para leitura, respondendo com números conferíveis, cada um com o SQL que o gerou. Métricas oficiais com SQL parametrizado, defesa em quatro camadas (o usuário da IA só pode ler) e avaliação automática com 36 perguntas de resposta conhecida, incluindo tentativas de ataque. Dados 100% fictícios, no mesmo modelo do Painel de Vendas. A página mostra conversas reais passo a passo.',
+            image: 'assets/images/ai-business-analyst.png',
+            link: 'projetos/ai-business-analyst/'
+            // repo: 'https://github.com/DiegoSantiago1/ai-business-analyst' (descomentar quando o repositório for público)
+        },
+        {
             title: 'Projeto em desenvolvimento',
             category: 'frontend',
             tags: ['Em breve', 'Front-end'],
