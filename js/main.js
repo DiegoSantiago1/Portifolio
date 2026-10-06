@@ -128,53 +128,60 @@ function setupActiveNavigation() {
     sections.forEach((section) => observer.observe(section));
 }
 
+// Projetos: mostra os 3 primeiros do filtro atual; "Ver mais projetos" abre o resto.
+// Filtro e expansão decidem juntos o que fica visível (um não desfaz o outro).
+const PROJETOS_INICIAIS = 3;
+const estadoProjetos = { filtro: 'all', expandido: false };
+
 function setupProjectFilters() {
     const filters = document.getElementById('project-filters');
-    const grid = document.getElementById('project-grid');
-    if (!filters || !grid) return;
-    const cards = [...grid.querySelectorAll('.project-card')];
+    if (!filters) return;
     const buttons = filters.querySelectorAll('.filter-btn');
     buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.classList.contains('active'))));
     filters.addEventListener('click', (event) => {
         const button = event.target.closest('.filter-btn');
         if (!button) return;
-        const filter = button.dataset.filter;
         buttons.forEach((item) => {
             const isActive = item === button;
             item.classList.toggle('active', isActive);
             item.setAttribute('aria-pressed', String(isActive));
         });
-        cards.forEach((card) => {
-            card.hidden = !(filter === 'all' || card.dataset.tags?.includes(filter));
-        });
+        estadoProjetos.filtro = button.dataset.filter;
+        estadoProjetos.expandido = false;
+        applyProjectVisibility();
     });
+}
+
+function applyProjectVisibility() {
+    const grid = document.getElementById('project-grid');
+    const button = document.getElementById('btn-load-more');
+    if (!grid) return;
+    let correspondentes = 0;
+    grid.querySelectorAll('.project-card').forEach((card) => {
+        const categorias = (card.dataset.tags || '').split(/\s+/);
+        const corresponde = estadoProjetos.filtro === 'all' || categorias.includes(estadoProjetos.filtro);
+        if (corresponde) correspondentes += 1;
+        card.hidden = !corresponde || (!estadoProjetos.expandido && correspondentes > PROJETOS_INICIAIS);
+    });
+    if (!button) return;
+    const escondidos = correspondentes - PROJETOS_INICIAIS;
+    // style.display, e não o atributo hidden: a classe "flex" do botão venceria o [hidden].
+    button.style.display = escondidos <= 0 ? 'none' : '';
+    button.setAttribute('aria-expanded', String(estadoProjetos.expandido));
+    button.innerHTML = estadoProjetos.expandido
+        ? '<span>Mostrar menos</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
+        : `<span>Ver mais projetos (${escondidos})</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
 }
 
 function setupProjectExpansion() {
     const button = document.getElementById('btn-load-more');
-    const container = document.getElementById('project-grid-container');
-    const fade = document.getElementById('fade-overlay');
-    const projectCount = document.querySelectorAll('#project-grid .project-card').length;
-    if (!button || !container) return;
-    if (projectCount <= 3) {
-        button.hidden = true;
-        fade?.classList.add('opacity-0');
-        container.classList.remove('max-h-[1400px]', 'md:max-h-[1200px]', 'lg:max-h-[1050px]');
-        return;
-    }
-    button.addEventListener('click', () => {
-        const isExpanded = container.classList.contains('max-h-[5000px]');
-        container.classList.toggle('max-h-[5000px]', !isExpanded);
-        container.classList.toggle('max-h-[1400px]', isExpanded);
-        container.classList.toggle('md:max-h-[1200px]', isExpanded);
-        container.classList.toggle('lg:max-h-[1050px]', isExpanded);
-        fade?.classList.toggle('opacity-0', !isExpanded);
-        button.setAttribute('aria-expanded', String(!isExpanded));
-        button.innerHTML = isExpanded
-            ? '<span>Ver mais projetos</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
-            : '<span>Mostrar menos</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
-        if (isExpanded) document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' });
+    button?.addEventListener('click', () => {
+        const fechando = estadoProjetos.expandido;
+        estadoProjetos.expandido = !estadoProjetos.expandido;
+        applyProjectVisibility();
+        if (fechando) document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' });
     });
+    applyProjectVisibility();
 }
 
 function setupCertificateTabs() {
