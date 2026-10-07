@@ -10,6 +10,15 @@ window.PORTFOLIO_DATA = {
             repo: 'https://github.com/DiegoSantiago1/ai-business-analyst'
         },
         {
+            title: 'Lakehouse do Financiamento — EUA',
+            category: 'dados',
+            tags: ['PySpark', 'Delta Lake', 'Python', 'Docker', 'GitHub Actions'],
+            description: 'Dados reais e públicos do governo dos EUA (HMDA): 222,7 milhões de pedidos de financiamento imobiliário de 2018 a 2025, num lakehouse em PySpark e Delta Lake (bronze, silver e gold). Mostra onde a casa ficou mais cara em relação à renda, o que a alta dos juros de 2022 fez, quem tem o crédito negado e por quê, e quanto o próprio dado do governo muda entre as três versões que ele publica de cada ano. Cada número é conferido contra os totais oficiais, por estado e por banco, antes de ser publicado. A página interativa abre no navegador; o código completo está no GitHub.',
+            image: 'assets/images/us-mortgage-lakehouse.png',
+            link: 'https://diegosantiago1.github.io/us-mortgage-lakehouse/',
+            repo: 'https://github.com/DiegoSantiago1/us-mortgage-lakehouse'
+        },
+        {
             title: 'Pipeline das Bicicletas de Londres',
             category: 'dados',
             tags: ['Python', 'PostgreSQL', 'SQL', 'dbt', 'Docker', 'GitHub Actions'],

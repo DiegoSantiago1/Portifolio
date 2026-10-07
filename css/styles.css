@@ -100,6 +100,8 @@
 .tag-github-actions { background: #1f6feb }
 .tag-ia-llm { background: #c5f03a; color: #111827 }
 .tag-react { background: #61dafb; color: #111827 }
+.tag-pyspark { background: #e25a1c }
+.tag-delta-lake { background: #00add4; color: #111827 }
 @media(max-width:767px) {
     .skill-tech-item {
         padding: .75rem .5rem!important
