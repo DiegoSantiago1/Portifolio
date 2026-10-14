@@ -78,8 +78,8 @@
 </div>
 <div class="projeto">
   <div class="linha"><h3>Pipeline das Bicicletas de Londres</h3><a class="quando" href="https://diegosantiago1.github.io/london-cycle-hire-pipeline/">página atualizada todo dia</a></div>
-  <p>Dados reais da TfL: coleta das ~800 estações a cada 15 min com bruto intocado, carga incremental de 41 milhões de viagens (6 formatos de arquivo, rodar duas vezes não duplica), dbt com 47 testes e job diário que recria o banco do zero e publica a página.</p>
-  <div class="stack">Python · PostgreSQL · dbt · GitHub Actions · Docker</div>
+  <p>Dados reais da TfL: coleta das ~800 estações a cada 15 min na AWS (Lambda + EventBridge Scheduler → S3, infraestrutura em Terraform, GitHub Actions via OIDC sem chave guardada), carga incremental de 41 milhões de viagens (6 formatos de arquivo, rodar duas vezes não duplica), dbt com 47 testes e job diário que recria o banco do zero e publica a página.</p>
+  <div class="stack">Python · PostgreSQL · dbt · AWS (Lambda, S3, EventBridge, IAM) · Terraform · GitHub Actions</div>
 </div>
 <div class="projeto">
   <div class="linha"><h3>Customer Analytics: Varejo Online</h3><a class="quando" href="https://diegosantiago1.github.io/customer-analytics-online-retail/">página interativa</a></div>
@@ -101,7 +101,7 @@
 <div class="habilidades">
   <b>Dados</b><span>SQL (CTEs, window functions, índices, transações), PostgreSQL, Python (Pandas), dbt, Power BI (Power Query, modelagem, DAX), Excel</span>
   <b>Backend</b><span>Node.js, Express, TypeScript, APIs REST</span>
-  <b>Engenharia</b><span>PySpark e Delta Lake (lakehouse), Docker, Git e GitHub, GitHub Actions, testes automatizados (pytest), migrations versionadas</span>
+  <b>Engenharia</b><span>PySpark e Delta Lake (lakehouse), AWS (Lambda, S3, EventBridge, IAM, CloudWatch), Terraform, Docker, Git e GitHub, GitHub Actions, testes automatizados (pytest), migrations versionadas</span>
   <b>Front-end</b><span>HTML, CSS, JavaScript, React, Tailwind CSS</span>
 </div>
 

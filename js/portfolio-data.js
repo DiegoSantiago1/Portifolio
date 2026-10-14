@@ -21,8 +21,8 @@ window.PORTFOLIO_DATA = {
         {
             title: 'Pipeline das Bicicletas de Londres',
             category: 'dados',
-            tags: ['Python', 'PostgreSQL', 'SQL', 'dbt', 'Docker', 'GitHub Actions'],
-            description: 'Dados reais e públicos das bicicletas de Londres (TfL Santander Cycles): onde as estações ficam vazias ou cheias, quando, e onde a operação deve agir primeiro. Um pipeline coleta as cerca de 800 estações a cada 15 minutos e guarda o dado bruto intocado; 41 milhões de viagens entram por carga incremental, que não duplica nada se rodar duas vezes. As transformações são em dbt com testes, e a página se refaz sozinha todo dia, com mapa por hora, ranking e a saúde do próprio pipeline. O código completo está no GitHub.',
+            tags: ['Python', 'PostgreSQL', 'dbt', 'AWS', 'Terraform', 'GitHub Actions'],
+            description: 'Dados reais e públicos das bicicletas de Londres (TfL Santander Cycles): onde as estações ficam vazias ou cheias, quando, e onde a operação deve agir primeiro. A coleta das cerca de 800 estações roda na AWS a cada 15 minutos (Lambda disparada pelo EventBridge, gravando o bruto intocado no S3), com toda a infraestrutura em Terraform e o GitHub entrando na AWS sem chave guardada (OIDC); 41 milhões de viagens entram por carga incremental, que não duplica nada se rodar duas vezes. As transformações são em dbt com testes, e a página se refaz sozinha todo dia, com mapa por hora, ranking e a saúde do próprio pipeline. O código completo está no GitHub.',
             image: 'assets/images/london-cycle-hire-pipeline.jpg',
             link: 'https://diegosantiago1.github.io/london-cycle-hire-pipeline/',
             repo: 'https://github.com/DiegoSantiago1/london-cycle-hire-pipeline'
