@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Capa do LinkedIn</title>
+<!-- Fonte da capa do LinkedIn (1584×396, exportada em 2x). Para refazer:
+     python assets/linkedin/gerar_capa.py -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1584px; height: 396px; overflow: hidden; position: relative;
+    background: #0b0b0f; color: #f5f5f4; font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  /* brilho laranja e grade sutil */
+  .brilho { position: absolute; inset: 0;
+    background:
+      radial-gradient(620px 360px at 78% 30%, rgba(234, 88, 12, .30), transparent 70%),
+      radial-gradient(420px 300px at 18% 110%, rgba(249, 115, 22, .16), transparent 70%); }
+  .grade { position: absolute; inset: 0; opacity: .5;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 35%, #000 100%); }
+  svg.fluxo { position: absolute; inset: 0; }
+  .faixa { position: absolute; left: 0; right: 0; top: 0; height: 5px;
+    background: linear-gradient(90deg, #ea580c, #f97316 60%, #fbbf24); }
+
+  .conteudo { position: absolute; left: 520px; top: 62px; width: 1000px; }
+  .olho { font: 500 15px "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: #fb923c; }
+  h1 { font-size: 50px; font-weight: 700; letter-spacing: -.015em; line-height: 1.05; margin-top: 12px; }
+  h1 .seta { color: #f97316; font-weight: 600; margin: 0 10px; }
+  .sub { font-size: 21px; color: #d6d3d1; margin-top: 12px; max-width: 900px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 26px; }
+  .chip { font-size: 15.5px; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.14); color: #f5f5f4; }
+  .chip.forte { border-color: rgba(249,115,22,.65); background: rgba(234,88,12,.14); }
+  .url { position: absolute; right: 48px; top: 26px; font: 500 15px "IBM Plex Mono", monospace; color: #a8a29e; }
+</style>
+</head>
+<body>
+  <div class="brilho"></div>
+  <div class="grade"></div>
+
+  <!-- Um pipeline estilizado: bruto → silver → gold, com pontos de dado correndo. -->
+  <svg class="fluxo" viewBox="0 0 1584 396" aria-hidden="true">
+    <defs>
+      <linearGradient id="linha" x1="0" x2="1">
+        <stop offset="0" stop-color="#f97316" stop-opacity="0"/>
+        <stop offset=".25" stop-color="#f97316" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#fbbf24" stop-opacity=".15"/>
+      </linearGradient>
+    </defs>
+    <g fill="none" stroke="url(#linha)" stroke-width="1.6">
+      <path d="M -20 340 C 200 340, 300 276, 470 278 S 760 376, 1040 362 S 1400 340, 1620 348"/>
+      <path d="M -20 388 C 220 388, 330 326, 500 328 S 820 416, 1100 404 S 1430 378, 1620 386" stroke-opacity=".6"/>
+      <path d="M -20 306 C 260 302, 300 254, 450 258 S 720 340, 980 332 S 1380 306, 1620 316" stroke-opacity=".45"/>
+    </g>
+    <g fill="#fb923c">
+      <circle cx="470" cy="278" r="5"/><circle cx="1040" cy="362" r="4" fill-opacity=".8"/>
+      <circle cx="500" cy="328" r="3.5" fill-opacity=".7"/><circle cx="1100" cy="404" r="3" fill-opacity=".6"/>
+      <circle cx="980" cy="332" r="4" fill-opacity=".8"/><circle cx="1320" cy="311" r="4" fill-opacity=".8"/>
+    </g>
+    <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#a8a29e" fill-opacity=".85" letter-spacing="1.5">
+      <text x="388" y="266">BRONZE</text>
+      <text x="954" y="358">SILVER</text>
+      <text x="1302" y="337">GOLD</text>
+    </g>
+  </svg>
+
+  <div class="faixa"></div>
+
+  <div class="conteudo">
+    <div class="olho">Dados reais · pipelines · resultados conferidos</div>
+    <h1>Analista de Dados<span class="seta">→</span>Engenharia de Dados</h1>
+    <div class="sub">Do dado bruto ao número em que dá para confiar: coleta, transformação, testes e nuvem.</div>
+    <div class="chips">
+      <span class="chip forte">SQL</span>
+      <span class="chip forte">Python</span>
+      <span class="chip forte">PySpark</span>
+      <span class="chip">dbt</span>
+      <span class="chip">Delta Lake</span>
+      <span class="chip">Databricks</span>
+      <span class="chip">AWS</span>
+      <span class="chip">Terraform</span>
+      <span class="chip">Power BI</span>
+      <span class="chip">PostgreSQL</span>
+    </div>
+  </div>
+
+  <div class="url">diegosantiago1.github.io/Portifolio</div>
+</body>
+</html>
