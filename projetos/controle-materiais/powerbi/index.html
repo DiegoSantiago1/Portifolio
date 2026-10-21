@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0d2c1c" />
+    <meta name="description" content="Os dois relatórios em Power BI do Controle de Materiais e Cautela: operacional (o sistema vivo) e analítico (12 meses congelados). Dados fictícios." />
+    <title>Relatórios Power BI · Controle de Materiais e Cautela</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="powerbi.css" />
+    <script type="module" src="powerbi.js"></script>
+  </head>
+  <body>
+    <header class="faixa">
+      <a class="faixa__marca" href="../">
+        <svg class="faixa__simbolo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4 5.8v5.6c0 4.6 3.3 8.6 8 10.1 4.7-1.5 8-5.5 8-10.1V5.8z" /><path d="m8.5 12 2.4 2.4 4.6-4.8" /></svg>
+        <span>Materiais e Cautela</span>
+      </a>
+      <a class="faixa__voltar" href="../">Voltar ao sistema</a>
+    </header>
+
+    <main class="pagina">
+      <div class="titulo">
+        <div>
+          <h1>Relatórios no Power BI</h1>
+          <p class="titulo__texto">
+            O sistema é para operar o balcão; a análise fica no Power BI. São dois relatórios, cada um
+            lendo o banco que responde à sua pergunta. Dados fictícios.
+          </p>
+        </div>
+        <a id="baixar-pdf" class="botao botao--primario" href="relatorio_operacional.pdf" download>Baixar este relatório em PDF</a>
+      </div>
+
+      <div class="relatorios" role="tablist" aria-label="Relatório">
+        <button class="relatorio" role="tab" type="button" data-relatorio="operacional" aria-selected="true">
+          <span class="relatorio__nome">Operacional</span>
+          <span class="relatorio__sub">O sistema vivo, retrato de 21/10/2026: entra e sai, posse, balcão, manutenção · 6 páginas</span>
+        </button>
+        <button class="relatorio" role="tab" type="button" data-relatorio="analitico" aria-selected="false">
+          <span class="relatorio__nome">Analítico</span>
+          <span class="relatorio__sub">12 meses congelados: conferência, atrasos, ociosidade, ruptura · 5 páginas</span>
+        </button>
+      </div>
+
+      <div class="visor">
+        <ol id="paginas" class="paginas" aria-label="Páginas do relatório"></ol>
+
+        <figure class="tela">
+          <a id="tela-link" class="tela__moldura" href="img/operacional-1.webp" target="_blank" rel="noopener" title="Abrir a imagem em tamanho real" aria-label="Abrir a imagem desta página em tamanho real">
+            <img id="tela-imagem" src="img/operacional-1.webp" width="1600" height="926" alt="Página Estoque agora do relatório operacional no Power BI" />
+          </a>
+          <figcaption class="tela__legenda">
+            <div>
+              <p id="tela-posicao" class="tela__posicao">Página 1 de 6</p>
+              <h2 id="tela-titulo">Estoque agora</h2>
+              <p id="tela-texto" class="tela__texto"></p>
+            </div>
+            <div class="tela__setas">
+              <button id="anterior" class="botao botao--icone" type="button" aria-label="Página anterior">‹</button>
+              <button id="proxima" class="botao botao--icone" type="button" aria-label="Próxima página">›</button>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <section class="como" aria-labelledby="como-titulo">
+        <h2 id="como-titulo">Como os relatórios foram feitos</h2>
+        <div class="como__grade">
+          <div>
+            <h3>Modelo estrela no banco</h3>
+            <p>O PostgreSQL entrega as dimensões e os fatos prontos no schema <code>bi</code>. O Power BI só importa e relaciona.</p>
+          </div>
+          <div>
+            <h3>Usuário que só lê</h3>
+            <p>A conexão usa <code>almox_bi</code>, que enxerga só os schemas de análise e não consegue gravar nada. Isso é testado.</p>
+          </div>
+          <div>
+            <h3>Relatório como código</h3>
+            <p>Formato de projeto (PBIP): modelo em TMDL e páginas em JSON, versionados no Git. Cada número foi conferido com SQL.</p>
+          </div>
+        </div>
+        <p class="como__links">
+          <a href="https://github.com/DiegoSantiago1/controle-materiais-cautela/blob/main/docs/POWERBI.md" target="_blank" rel="noopener noreferrer">Guia com as medidas DAX explicadas</a>
+          <a href="https://github.com/DiegoSantiago1/controle-materiais-cautela/tree/main/powerbi" target="_blank" rel="noopener noreferrer">Arquivos .pbip no GitHub</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

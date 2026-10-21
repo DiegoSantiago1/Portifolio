@@ -55,6 +55,7 @@
       <symbol id="i-saida" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /><path d="M10 17l5-5-5-5" /><path d="M15 12H3" /></symbol>
       <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 2.5 4 5.8v5.6c0 4.6 3.3 8.6 8 10.1 4.7-1.5 8-5.5 8-10.1V5.8z" /></symbol>
       <symbol id="i-calendario" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 10h18" /></symbol>
+      <symbol id="i-grafico" viewBox="0 0 24 24"><path d="M3 3v18h18" /><path d="M7 15v3M11 11v7M15 13v5M19 7v11" /></symbol>
       <symbol id="i-pacote-mais" viewBox="0 0 24 24"><path d="M21 10V8l-9-5-9 5v8l9 5 3-1.7" /><path d="m3 8 9 5 9-5M12 13v8" /><path d="M19 15v6M16 18h6" /></symbol>
     </svg>
 
@@ -154,6 +155,9 @@
           </div>
           <div class="topo__acoes">
             <span id="topo-relogio" class="topo__relogio" aria-hidden="true"></span>
+            <a class="botao botao--secundario topo__powerbi" href="powerbi/" target="_blank" rel="noopener" title="Os relatórios em Power BI (abre em outra aba)">
+              <svg class="icone" aria-hidden="true"><use href="#i-grafico" /></svg><span>Power BI</span>
+            </a>
             <button id="botao-atualizar" class="botao botao--secundario botao--icone" type="button" aria-label="Atualizar a página">
               <svg class="icone" aria-hidden="true"><use href="#i-recarregar" /></svg>
             </button>
@@ -169,7 +173,7 @@
   
     <aside id="aviso-demo" role="note" style="position:fixed;right:16px;bottom:16px;z-index:200;max-width:340px;display:flex;gap:10px;align-items:flex-start;padding:12px 12px 12px 14px;border-radius:12px;background:#0d2c1c;color:#eef6f0;font:13px/1.5 system-ui,'Segoe UI',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35)">
       <span><b>Demo com dados fictícios.</b> O que você fizer aqui fica só neste navegador (recarregar volta ao início). Você entra como administradora; para ver outro perfil, saia e entre com <b>enzo.04</b> (equipamentista) ou <b>heitor.09</b> (consulta), com qualquer senha.<br>
-      <a href="https://github.com/DiegoSantiago1/controle-materiais-cautela" target="_blank" rel="noopener noreferrer" style="color:#9be3b5">Código no GitHub ↗</a> · <a href="https://github.com/DiegoSantiago1/controle-materiais-cautela/blob/main/docs/POWERBI.md" target="_blank" rel="noopener noreferrer" style="color:#9be3b5">Relatórios no Power BI ↗</a></span>
+      <a href="https://github.com/DiegoSantiago1/controle-materiais-cautela" target="_blank" rel="noopener noreferrer" style="color:#9be3b5">Código no GitHub ↗</a> · <a href="powerbi/" target="_blank" rel="noopener" style="color:#9be3b5">Relatórios no Power BI ↗</a></span>
       <button type="button" aria-label="Fechar aviso" onclick="this.parentElement.remove()" style="all:unset;cursor:pointer;color:#9fbfaa;font-size:18px;line-height:1;padding:0 2px">×</button>
     </aside>
   </body>
