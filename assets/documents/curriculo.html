@@ -2,121 +2,107 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Currículo · Diego Freitas Santiago</title>
+<title>Diego Freitas Santiago - Analista de Dados</title>
 <!-- Fonte do currículo. O PDF (curriculo-diego-santiago.pdf) é gerado a partir deste
-     arquivo; para atualizar, edite aqui e gere o PDF de novo (veja README.md). -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+     arquivo; para atualizar, edite aqui e gere o PDF de novo (veja README.md).
+     Feito para ATS: uma coluna, texto selecionável, Arial, sem tabelas, grades nem ícones.
+     Sem telefone de propósito: o PDF é público. -->
 <style>
-  @page { size: A4; margin: 14mm 15mm; }
+  @page { size: A4; margin: 8mm 12mm; }
   * { box-sizing: border-box; }
-  body { margin: 0; font: 10pt/1.45 "IBM Plex Sans", system-ui, sans-serif; color: #1f2933; }
-  a { color: #c2410c; text-decoration: none; }
-  header { border-bottom: 2px solid #ea580c; padding-bottom: 8px; margin-bottom: 10px; }
-  h1 { font-size: 21pt; margin: 0; letter-spacing: -0.01em; color: #111827; }
-  .cargo { font-size: 11.5pt; font-weight: 600; color: #c2410c; margin: 2px 0 6px; }
-  .contato { font-size: 9pt; color: #4b5563; display: flex; flex-wrap: wrap; gap: 4px 14px; }
-  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .08em; color: #c2410c; margin: 13px 0 6px; padding-bottom: 3px; border-bottom: 1px solid #fde4d3; }
-  h3 { font-size: 10.5pt; margin: 0; color: #111827; }
-  .linha { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-  .quando { font-size: 9pt; color: #6b7280; white-space: nowrap; }
-  .onde { font-size: 9.5pt; color: #4b5563; margin-bottom: 3px; }
-  ul { margin: 3px 0 0; padding-left: 15px; }
-  li { margin: 1.5px 0; }
-  .bloco { margin-bottom: 9px; break-inside: avoid; }
-  .projeto { margin-bottom: 7px; break-inside: avoid; }
-  .projeto p { margin: 1px 0 0; }
-  .stack { font-size: 8.8pt; color: #6b7280; }
-  .habilidades { display: grid; grid-template-columns: 105px 1fr; gap: 3px 10px; font-size: 9.5pt; }
-  .habilidades b { color: #111827; }
+  body { margin: 0; font: 9.2pt/1.28 Arial, Helvetica, sans-serif; color: #111; }
+  h1 { font-size: 17pt; text-align: center; margin: 0; }
+  .titulo { text-align: center; font-size: 10.4pt; margin: 2px 0 2px; }
+  .contato { text-align: center; font-size: 8.9pt; line-height: 1.35; }
+  h2 { font-size: 10pt; text-transform: uppercase; margin: 7px 0 3px; padding-bottom: 2px; border-bottom: 1px solid #888; }
   p { margin: 0; }
+  ul { margin: 1px 0 0; padding-left: 14px; }
+  li { margin: 1px 0; }
+  .item { margin-bottom: 4px; }
+  .cab { font-weight: 700; }
+  .cab span { font-weight: 400; }
+  .quando { font-style: italic; font-size: 8.9pt; }
+  .comp p { margin: 1px 0; }
 </style>
 </head>
 <body>
-<header>
-  <h1>Diego Freitas Santiago</h1>
-  <div class="cargo">Analista de Dados · SQL, Python, Power BI e dbt · Node.js e TypeScript</div>
-  <div class="contato">
-    <span>Recife, PE · Brasil</span>
-    <a href="mailto:freitasdiego140@gmail.com">freitasdiego140@gmail.com</a>
-    <a href="https://www.linkedin.com/in/diego-freitas-santiago">linkedin.com/in/diego-freitas-santiago</a>
-    <a href="https://github.com/DiegoSantiago1">github.com/DiegoSantiago1</a>
-    <a href="https://diegosantiago1.github.io/Portifolio/">diegosantiago1.github.io/Portifolio</a>
-  </div>
-</header>
+
+<h1>DIEGO FREITAS SANTIAGO</h1>
+<p class="titulo">Analista de Dados | Engenharia de Dados | SQL, Python, Power BI, PySpark, dbt, Airflow, AWS</p>
+<p class="contato">Recife, PE (disponível para remoto, híbrido e viagens) | freitasdiego140@gmail.com<br>
+linkedin.com/in/diego-freitas-santiago | github.com/DiegoSantiago1 | diegosantiago1.github.io/Portifolio</p>
 
 <h2>Resumo</h2>
-<p>Analista de dados com base em <b>SQL, PostgreSQL, Python e Power BI</b>, focado em transformar dados brutos em informação confiável para decisões de negócio. Desenvolvi sistemas que estão em uso no trabalho (painel de vendas em concessionárias Honda de Recife; controle de cautelas na Força Aérea) e projetos públicos com dados reais, testes automatizados e documentação. Uso Node.js e TypeScript como diferencial para levar os dados até a aplicação e sigo em direção à Engenharia de Dados: pipelines, dbt, Docker e nuvem.</p>
+<p>Analista de Dados na Autoline Honda, rumo à <b>Engenharia de Dados</b>. Transformo necessidades de negócio em <b>indicadores, dashboards e relatórios</b> no <b>Power BI</b> e construo <b>pipelines ETL/ELT</b> com <b>SQL, Python e dbt</b>. Tenho projetos públicos com dados reais: um <b>Lakehouse em PySpark</b> com 222,7 milhões de registros orquestrado com <b>Airflow</b>, um <b>pipeline na AWS</b> que coleta dados a cada 15 minutos, análises de clientes com <b>segmentação e churn</b> e um <b>agente de IA</b> que consulta o banco de dados. Valido cada número antes de publicar, com <b>testes de qualidade de dados</b> automatizados, e documento as decisões técnicas.</p>
 
-<h2>Experiência</h2>
-<div class="bloco">
-  <div class="linha"><h3>Analista de Dados I</h3><span class="quando">08/2026 – atual</span></div>
-  <div class="onde">Autoline Honda · Recife, PE</div>
+<h2>Experiência Profissional</h2>
+
+<div class="item">
+  <p class="cab">Analista de Dados I | Autoline Honda</p>
+  <p class="quando">08/2026 - Atual | Recife, PE</p>
   <ul>
-    <li>Desenvolvi o <b>painel de vendas</b> pedido pela gestão, hoje <b>em uso em concessionárias Honda de Recife</b>: vendas do dia, metas por loja, ranking de vendedores e mix de modelos (primeira versão em Google Apps Script).</li>
-    <li><b>Dashboards no Power BI</b> para acompanhar metas e desempenho de vendas por loja e por vendedor.</li>
-    <li><b>Automações em Python</b> para reduzir tarefas manuais de tratamento e conferência de dados.</li>
-    <li>Controle de entrada e saída de veículos, com conferência e cruzamento de dados entre planilhas e sistemas em Excel (PROCX, SOMASES, tabelas dinâmicas).</li>
-  </ul>
-</div>
-<div class="bloco">
-  <div class="linha"><h3>Administrativo e Controle de Material</h3><span class="quando">03/2020 – 02/2026</span></div>
-  <div class="onde">Força Aérea Brasileira · Recife, PE</div>
-  <ul>
-    <li>Desenvolvi o <b>sistema de controle de cautelas</b> da seção de material, que segue em uso, e os relatórios de estoque apresentados nas reuniões com os superiores.</li>
-    <li>Controle de materiais e estoque, escalas e contato com empresas de logística e pagamentos.</li>
-    <li>Faturamento e guias de planos de saúde (odontoclínica); gestão de estagiários, certificados e contato com universidades.</li>
+    <li>Desenvolvi o <b>painel de vendas</b> solicitado pela gestão, hoje em uso em concessionárias Honda de Recife, definindo com a área de negócio os indicadores: vendas do dia, metas por loja, ranking de vendedores e mix de modelos.</li>
+    <li>Crio <b>dashboards no Power BI</b> para metas e desempenho; integro e concilio dados de planilhas e sistemas, identificando inconsistências; <b>automação</b> com Python e Google Apps Script.</li>
   </ul>
 </div>
 
-<h2>Projetos (código e demonstração no GitHub)</h2>
-<div class="projeto">
-  <div class="linha"><h3>Lakehouse do Financiamento Imobiliário dos EUA</h3><a class="quando" href="https://diegosantiago1.github.io/us-mortgage-lakehouse/">página interativa</a></div>
-  <p>222,7 milhões de registros públicos do governo dos EUA (HMDA, 2018–2025) em PySpark e Delta Lake: carga idempotente, CHECK constraints, time travel e comparação de versões sem chave (multiconjunto por hash, provada contra o exceptAll). Cada número conferido contra o governo, por estado e por banco; taxas de negativa a 0,06 p.p. do relatório do CFPB. Catálogo de tabelas (metastore Hive e Unity Catalog no Databricks) com poda de partições medida no EXPLAIN.</p>
-  <div class="stack">PySpark · Delta Lake · Databricks · Python · Docker · GitHub Actions</div>
-</div>
-<div class="projeto">
-  <div class="linha"><h3>Pipeline das Bicicletas de Londres</h3><a class="quando" href="https://diegosantiago1.github.io/london-cycle-hire-pipeline/">página atualizada todo dia</a></div>
-  <p>Dados reais da TfL: coleta das ~800 estações a cada 15 min na AWS (Lambda + EventBridge Scheduler → S3, infraestrutura em Terraform, GitHub Actions via OIDC sem chave guardada), carga incremental de 41 milhões de viagens (6 formatos de arquivo, rodar duas vezes não duplica), dbt com 47 testes e job diário que recria o banco do zero e publica a página.</p>
-  <div class="stack">Python · PostgreSQL · dbt · AWS (Lambda, S3, EventBridge, IAM) · Terraform · GitHub Actions</div>
-</div>
-<div class="projeto">
-  <div class="linha"><h3>Customer Analytics: Varejo Online</h3><a class="quando" href="https://diegosantiago1.github.io/customer-analytics-online-retail/">página interativa</a></div>
-  <p>1 milhão de linhas de vendas reais (UCI): segmentação RFM, churn validado numa data passada, coortes e CLV de 6 meses comparado com um modelo ingênuo sazonal; 18 checagens de qualidade e 280 testes.</p>
-  <div class="stack">PostgreSQL · SQL · Python · Power BI</div>
-</div>
-<div class="projeto">
-  <div class="linha"><h3>Controle de Materiais e Cautela</h3><a class="quando" href="https://diegosantiago1.github.io/Portifolio/projetos/controle-materiais/">demo</a></div>
-  <p>Reconstrução do sistema da FAB com dados fictícios: regras no banco, histórico imutável, concorrência tratada, análises em SQL e Python, dois relatórios no Power BI conferidos contra o SQL.</p>
-  <div class="stack">PostgreSQL · SQL · Python · Power BI · Node.js · TypeScript</div>
-</div>
-<div class="projeto">
-  <div class="linha"><h3>Painel de Vendas Honda</h3><a class="quando" href="https://diegosantiago1.github.io/Portifolio/projetos/painel-vendas/">demo</a></div>
-  <p>Reconstrução do painel em uso, com dados fictícios: modelagem no PostgreSQL, API REST em Node.js/TypeScript com SQL escrito à mão e painel em Chart.js.</p>
-  <div class="stack">PostgreSQL · SQL · Node.js · TypeScript · Docker</div>
+<div class="item">
+  <p class="cab">Força Aérea Brasileira | 03/2020 - 02/2026</p>
+  <ul>
+    <li>Controle de Material: desenvolvi o sistema de controle de cautelas da seção, que segue em uso, e os <b>relatórios de estoque</b> apresentados à chefia.</li>
+    <li>Hospital de Aeronáutica de Recife: coordenação de estágios e contato com universidades. Odontoclínica: faturamento de guias de planos de saúde e atendimento.</li>
+  </ul>
 </div>
 
-<h2>Habilidades</h2>
-<div class="habilidades">
-  <b>Dados</b><span>SQL (CTEs, window functions, índices, transações), PostgreSQL, Python (Pandas), dbt, Power BI (Power Query, modelagem, DAX), Excel</span>
-  <b>Backend</b><span>Node.js, Express, TypeScript, APIs REST</span>
-  <b>Engenharia</b><span>PySpark, Delta Lake e Databricks (lakehouse, Unity Catalog), AWS (Lambda, S3, EventBridge, IAM, CloudWatch), Terraform, Docker, Git e GitHub, GitHub Actions, testes automatizados (pytest), migrations versionadas</span>
-  <b>Front-end</b><span>HTML, CSS, JavaScript, React, Tailwind CSS</span>
+<h2>Projetos de Dados</h2>
+
+<div class="item">
+  <p class="cab">Lakehouse do Financiamento Imobiliário dos EUA <span>| PySpark, Spark SQL, Delta Lake, Databricks, Unity Catalog, Airflow</span></p>
+  <ul>
+    <li>222,7 milhões de registros públicos em arquitetura medalhão (bronze, silver, gold), orquestrada com <b>Airflow</b>; particionamento e Z-ORDER (de 14 para 2 arquivos lidos, consulta 54% mais rápida); indicadores validados contra os totais oficiais.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <p class="cab">Pipeline de Dados na AWS: Bicicletas de Londres <span>| Python, SQL, PostgreSQL, dbt, AWS (Lambda, S3, EventBridge, Glue, Athena), Terraform</span></p>
+  <ul>
+    <li>Coleta de API a cada 15 minutos (AWS Lambda) e carga incremental de 41 milhões de registros de arquivos com 6 formatos; dbt com testes de qualidade; SQL direto no data lake com Glue Data Catalog e Athena; infraestrutura em Terraform; dashboard atualizado todo dia.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <p class="cab">Customer Analytics: Varejo Online <span>| SQL, PostgreSQL, Python, scikit-learn, Power BI</span></p>
+  <ul>
+    <li>Segmentação RFM, coortes, valor do cliente e churn (regra e regressão logística) em 1 milhão de registros; insight: 48% da receita em risco estava em 402 clientes leais que pararam de comprar; relatório de 4 páginas no Power BI.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <p class="cab">AI Business Analyst <span>| LLM, tool calling, RAG, SQL, PostgreSQL, pgvector, Python, FastAPI, TypeScript, Docker</span></p>
+  <ul>
+    <li>Agente de IA que responde perguntas de negócio consultando o banco só para leitura e um manual (RAG); avaliado com 36 perguntas de resposta conhecida, com 95,3% dos números conferidos no banco.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <p class="cab">Controle de Materiais e Estoque <span>| PostgreSQL, SQL, Power BI, DAX, Power Query</span></p>
+  <ul>
+    <li>Modelo estrela, medidas em DAX (CALCULATE, KEEPFILTERS, RANKX) e dois relatórios em Power BI, com cada medida conferida contra o SQL; regras de negócio no banco com transações.</li>
+  </ul>
+</div>
+
+<h2>Competências</h2>
+<div class="comp">
+  <p><b>Análise e BI:</b> Power BI (DAX, Power Query), dashboards, KPIs, análise exploratória, modelagem dimensional (modelo estrela), Excel (PROCX, SOMASES, tabelas dinâmicas)</p>
+  <p><b>Dados:</b> SQL avançado (CTEs, window functions, índices), PostgreSQL, MySQL, Python (pandas, scikit-learn), ETL/ELT, dbt, Airflow, qualidade de dados, Data Lake, Lakehouse</p>
+  <p><b>Big Data e nuvem:</b> PySpark, Spark SQL, Delta Lake, Databricks, AWS (Lambda, S3, EventBridge, Glue, Athena, CloudWatch, IAM), Terraform</p>
+  <p><b>Ferramentas:</b> Git, GitHub, GitHub Actions (CI/CD), Docker, APIs REST, Node.js, TypeScript; IA generativa (LLMs, tool calling, RAG)</p>
 </div>
 
 <h2>Formação</h2>
-<div class="bloco">
-  <div class="linha"><h3>Análise e Desenvolvimento de Sistemas</h3><span class="quando">conclusão prevista: 06/2028</span></div>
-  <div class="onde">Centro Universitário FBV Wyden · Recife, PE</div>
-</div>
+<p><b>Tecnólogo em Análise e Desenvolvimento de Sistemas</b> | UniFBV Wyden | 03/2026 - 06/2028 (cursando)</p>
+<p>Cursos: Power BI Intermediário e Excel (Santander Open Academy), MySQL 40 h (Curso em Vídeo), Formação Full Stack (DevClub)</p>
+<p>Idiomas: Inglês intermediário | Destaque: 2º lugar no Demoday do Porto Digital (Kick Off 2023.2)</p>
 
-<h2>Conquistas e cursos</h2>
-<ul>
-  <li><b>2º lugar</b> no Demoday do Kick Off 2023.2, Residência Tecnológica do Porto Digital (tema Inovação Urbana), em equipe multidisciplinar.</li>
-  <li>Santander Open Academy: Power BI Intermediário (Análise e Modelagem de Dados); Excel do Básico ao Intermediário.</li>
-  <li>DevClub: Formação Full Stack (TypeScript, Node.js, JavaScript, React, Git e deploy).</li>
-  <li>Curso em Vídeo: MySQL; Algoritmos e Lógica de Programação; Segurança da Informação; Redes de Computadores.</li>
-</ul>
 </body>
 </html>
