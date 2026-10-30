@@ -4,10 +4,11 @@ window.PORTFOLIO_DATA = {
             title: 'Clínicas-escola em dados',
             category: 'dados',
             tags: ['Power BI', 'Power Query', 'DAX', 'Looker Studio', 'Excel', 'Python'],
-            description: 'Um ano de atendimentos de uma rede de clínicas-escola (Odontologia, Fisioterapia, Psicologia e Nutrição) em Recife, Olinda e Jaboatão, com dados fictícios. Duas clínicas exportam do sistema e duas anotam em planilha: a mesma falta aparece escrita de cinco jeitos, há datas como texto, linhas duplicadas e prontuário em branco. Padronizei tudo com 16 regras em Python, cada correção registrada com arquivo, aba e linha, e provei linha a linha que a limpeza está certa. Os indicadores (faltas, ocupação da agenda, fila de espera e horas de prática dos alunos) estão no Power BI, com Power Query, modelo estrela e 24 medidas DAX conferidas contra o Python, e a mesma base está pronta para o Looker Studio. Achado principal: uma em cada cinco consultas termina em falta, e a falta se concentra na segunda de manhã e em quem esperou muito na fila. Na página, você digita como a recepção anotaria e vê a regra padronizar ao vivo.',
+            description: 'Um ano de atendimentos de uma rede de clínicas-escola (Odontologia, Fisioterapia, Psicologia e Nutrição) em Recife, Olinda e Jaboatão, com dados fictícios. Sistema, planilhas feitas à mão e o tablet da recepção chegam bagunçados: a mesma falta escrita de cinco jeitos, datas como texto, prontuário em branco, motivo em texto livre. Padronizei tudo com 20 regras em Python e provei linha a linha que a limpeza está certa. O relatório no Power BI tem 8 páginas, modelo estrela e 36 medidas DAX conferidas contra o Python, e um painel animado responde às perguntas da gestão: faturamento, faltas, motivos, fila e espera na recepção. Achado principal: uma em cada cinco consultas fica vazia, com pico na segunda de manhã, e as faltas de quem pagaria a taxa custaram R$ 240 mil no ano.',
             image: 'assets/images/clinicas-escola-indicadores.jpg',
             link: 'https://diegosantiago1.github.io/clinicas-escola-indicadores/',
-            repo: 'https://github.com/DiegoSantiago1/clinicas-escola-indicadores'
+            repo: 'https://github.com/DiegoSantiago1/clinicas-escola-indicadores',
+            extra: { label: 'Ver o relatório no Power BI', href: 'https://diegosantiago1.github.io/clinicas-escola-indicadores/powerbi/' }
         },
         {
             title: 'AI Business Analyst — Vendas',
