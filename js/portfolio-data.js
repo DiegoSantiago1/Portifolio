@@ -1,12 +1,12 @@
 window.PORTFOLIO_DATA = {
     projects: [
         {
-            title: 'Clínicas-escola em dados',
+            title: 'Painel Saúde',
             category: 'dados',
             tags: ['Power BI', 'Power Query', 'DAX', 'Looker Studio', 'Excel', 'Python'],
             description: 'Um ano de atendimentos de uma rede de clínicas-escola (Odontologia, Fisioterapia, Psicologia e Nutrição) em Recife, Olinda e Jaboatão, com dados fictícios. Sistema, planilhas feitas à mão e o tablet da recepção chegam bagunçados: a mesma falta escrita de cinco jeitos, datas como texto, prontuário em branco, motivo em texto livre. Padronizei tudo com 20 regras em Python e provei linha a linha que a limpeza está certa. O relatório no Power BI tem 8 páginas, modelo estrela e 36 medidas DAX conferidas contra o Python, e um painel animado responde às perguntas da gestão: faturamento, faltas, motivos, fila e espera na recepção. Achado principal: uma em cada cinco consultas fica vazia, com pico na segunda de manhã, e as faltas de quem pagaria a taxa custaram R$ 240 mil no ano.',
             image: 'assets/images/clinicas-escola-indicadores.jpg',
-            link: 'https://diegosantiago1.github.io/clinicas-escola-indicadores/',
+            link: 'https://diegosantiago1.github.io/clinicas-escola-indicadores/dashboard/',
             repo: 'https://github.com/DiegoSantiago1/clinicas-escola-indicadores',
             extra: { label: 'Ver o relatório no Power BI', href: 'https://diegosantiago1.github.io/clinicas-escola-indicadores/powerbi/' }
         },
